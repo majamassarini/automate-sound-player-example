@@ -1,0 +1,20 @@
+- !schedule
+  trigger: "asleep time"
+  for performers: "sonos commands"
+
+- !schedule
+  trigger: "sleepy time"
+  for performers: "sonos commands"
+
+- !schedule
+  trigger: "awake time week"
+  for performers: "sonos commands"
+
+- !schedule
+  trigger: "awake time week end"
+  for performers: "sonos commands"
+
+- !schedule
+  trigger: "asleep time"
+  for performers: "sonos commands"
+

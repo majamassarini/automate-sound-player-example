@@ -1,0 +1,7 @@
+- !schedule
+  trigger: "choose next user"
+  for performers: "sonos commands"
+
+- !schedule
+  trigger: "choose previous user"
+  for performers: "sonos commands"

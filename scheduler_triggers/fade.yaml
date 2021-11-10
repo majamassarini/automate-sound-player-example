@@ -1,0 +1,74 @@
+- !state.entering.delay.Trigger
+  name: "fade in vol 1"
+  notify events:
+    - !sound.player.event.fade_in.volume.Event { value: 1 }
+  when appliance state became: "Fade In"
+  and timeout expires: 10
+- !state.entering.delay.Trigger
+  name: "fade in vol 3"
+  notify events:
+    - !sound.player.event.fade_in.volume.Event { value: 3 }
+  when appliance state became: "Fade In"
+  and timeout expires: 40
+- !state.entering.delay.Trigger
+  name: "fade in vol 7"
+  notify events:
+    - !sound.player.event.fade_in.volume.Event { value: 7 }
+  when appliance state became: "Fade In"
+  and timeout expires: 100
+- !state.entering.delay.Trigger
+  name: "fade in vol 15"
+  notify events:
+    - !sound.player.event.fade_in.volume.Event { value: 15 }
+  when appliance state became: "Fade In"
+  and timeout expires: 280
+- !state.entering.delay.Trigger
+  name: "fade in vol 30"
+  notify events:
+    - !sound.player.event.fade_in.volume.Event { value: 30 }
+  when appliance state became: "Fade In"
+  and timeout expires: 600
+- !state.entering.delay.Trigger
+  name: "fade in elapsed"
+  notify events:
+    - !home.event.elapsed.Event.On
+  when appliance state became: "Fade In"
+  and timeout expires: 950
+
+
+- !state.entering.delay.Trigger
+  name: "fade out elapsed"
+  notify events:
+    - !home.event.elapsed.Event.On
+  when appliance state became: "Fade Out"
+  and timeout expires: 950
+- !state.entering.delay.Trigger
+  name: "fade out vol 1"
+  notify events:
+    - !sound.player.event.fade_out.volume.Event { value: 1 }
+  when appliance state became: "Fade Out"
+  and timeout expires: 600
+- !state.entering.delay.Trigger
+  name: "fade out vol 3"
+  notify events:
+    - !sound.player.event.fade_out.volume.Event { value: 3 }
+  when appliance state became: "Fade Out"
+  and timeout expires: 280
+- !state.entering.delay.Trigger
+  name: "fade out vol 7"
+  notify events:
+    - !sound.player.event.fade_out.volume.Event { value: 7 }
+  when appliance state became: "Fade Out"
+  and timeout expires: 100
+- !state.entering.delay.Trigger
+  name: "fade out vol 15"
+  notify events:
+    - !sound.player.event.fade_out.volume.Event { value: 15 }
+  when appliance state became: "Fade Out"
+  and timeout expires: 40
+- !state.entering.delay.Trigger
+  name: "fade out vol 30"
+  notify events:
+    - !sound.player.event.fade_out.volume.Event { value: 30 }
+  when appliance state became: "Fade Out"
+  and timeout expires: 10

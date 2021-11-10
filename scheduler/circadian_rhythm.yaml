@@ -1,0 +1,11 @@
+- !schedule
+  trigger: "user Maja playlists"
+  for performers: "sonos commands"
+
+- !schedule
+  trigger: "user Alja playlists"
+  for performers: "sonos commands"
+
+- !schedule
+  trigger: "user Alessandro playlists"
+  for performers: "sonos commands"

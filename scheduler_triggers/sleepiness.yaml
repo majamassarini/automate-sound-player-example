@@ -1,0 +1,30 @@
+- !cron.Trigger
+  name: "asleep time"
+  notify events:
+    - !home.event.elapsed.Event.Off
+    - !home.event.sleepiness.Event.Asleep
+  hour: 23
+
+- !cron.Trigger
+  name: "awake time week end"
+  notify events:
+    - !home.event.elapsed.Event.Off
+    - !home.event.sleepiness.Event.Awake
+  day_of_week: "sat-sun"
+  hour: 9
+
+- !cron.Trigger
+  name: "awake time week"
+  notify events:
+    - !home.event.elapsed.Event.Off
+    - !home.event.sleepiness.Event.Awake
+  day_of_week: "mon-fri"
+  hour: 7
+
+- !cron.Trigger
+  name: "sleepy time"
+  notify events:
+    - !home.event.elapsed.Event.Off
+    - !home.event.sleepiness.Event.Sleepy
+  hour: 20
+

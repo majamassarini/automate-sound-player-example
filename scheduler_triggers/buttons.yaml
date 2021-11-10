@@ -1,0 +1,15 @@
+- !protocol.enum.Trigger
+  name: "choose next user"
+  notify more events: []
+  plus selected event: !home.event.user.Event.A
+  or: "next"
+  when triggered performers: "next user button"
+
+- !protocol.enum.Trigger
+  name: "choose previous user"
+  notify more events: []
+  plus selected event: !home.event.user.Event.A
+  or: "previous"
+  when triggered performers: "previous user button"
+
+

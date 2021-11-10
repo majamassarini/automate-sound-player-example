@@ -1,0 +1,44 @@
+- !schedule
+  trigger: "fade in vol 1"
+  for performers: "fade a sound player"
+- !schedule
+  trigger: "fade in vol 3"
+  for performers: "fade a sound player"
+- !schedule
+  trigger: "fade in vol 7"
+  for performers: "fade a sound player"
+- !schedule
+  trigger: "fade in vol 15"
+  for performers: "fade a sound player"
+- !schedule
+  trigger: "fade in vol 30"
+  for performers: "fade a sound player"
+- !schedule
+  trigger: "fade in elapsed"
+  for performers: "sonos commands"
+- !schedule
+  trigger: "fade in elapsed reset"
+  for performers: "sonos commands"
+
+
+- !schedule
+  trigger: "fade out vol 1"
+  for performers: "fade a sound player"
+- !schedule
+  trigger: "fade out vol 3"
+  for performers: "fade a sound player"
+- !schedule
+  trigger: "fade out vol 7"
+  for performers: "fade a sound player"
+- !schedule
+  trigger: "fade out vol 15"
+  for performers: "fade a sound player"
+- !schedule
+  trigger: "fade out vol 30"
+  for performers: "fade a sound player"
+- !schedule
+  trigger: "fade out elapsed"
+  for performers: "sonos commands"
+- !schedule
+  trigger: "fade out elapsed reset"
+  for performers: "sonos commands"

@@ -1,0 +1,2056 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--
+
+* AerWebCopy Engine [version 6.3.0]
+* Copyright Aeroson Systems & Co.
+* File mirrored from http://172.31.10.247:8181/appliance/a sound player
+* At UTC time: 2021-11-10 21:08:47.120264
+
+--><head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/png" href="../static/800db573__icon_128x128_blu.png">
+    <link rel="stylesheet" href="../../cdn.jsdelivr.net/npm/bulma%400.9.1/css/dff7d2a4__bulma.min.css">
+    <link rel="stylesheet" href="../static/368c5a29__homino.css">
+
+    <title>a sound player</title>
+
+    <script type="text/javascript" src="../../ajax.googleapis.com/ajax/libs/jquery/1/0a8ce0df__jquery.min.js"></script>
+    <script src="../../kit.fontawesome.com/f5f88875__dcf90dd78d.js"></script>
+    <script type="text/javascript" src="../static/8be64023__homino.js"></script>
+</head>
+
+<body>
+<section class="section">
+    <div class="container">
+
+        <nav class="navbar" role="navigation" aria-label="main navigation">
+    <div class="navbar-brand">
+        <a class="navbar-item" href="/">
+            <img src="../static/800db573__icon_128x128_blu.png" width="32" height="32">
+        </a>
+
+        <a role="button" id="burger-button" onclick='$("#burger-button").toggleClass("is-active");$("#home-navbar").toggleClass("is-active")' class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="home-navbar">
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+        </a>
+    </div>
+
+    <div id="home-navbar" class="navbar-menu">
+        <div class="navbar-start">
+            <a class="navbar-item" href="../3e5582b2__index.html">
+            <span class="icon has-text-info">
+                <i class="fas fa-home"></i>
+            </span>
+                <span>Home</span>
+            </a>
+            <a class="navbar-item" href="../b8e04c75__collections.html">
+                <span class="icon has-text-info">
+                <i class="fas fa-list"></i>
+            </span>
+                <span>Collections</span>
+            </a>
+            
+            <!--a class="navbar-item" href="/editor">
+                <span class="icon has-text-info">
+                <i class="fas fa-edit"></i>
+            </span>
+                <span>Configurator</span>
+            </a-->
+            <a class="navbar-item" href="../d9d82a84__logs.html">
+                <span class="icon has-text-info">
+                <i class="far fa-clipboard"></i>
+            </span>
+                <span>Logs</span>
+            </a>
+            
+        </div>
+
+        <div class="navbar-end">
+            <div class="navbar-item">
+                
+                <div class="buttons">
+                    <label class="label is-info mr-3">admin</label>
+                    <form action="../f5b27d87__logout.html" method="post">
+                        <input class="button is-light" type="submit" value="Logout">
+                    </form>
+                </div>
+                
+                <div class="modal" id="modal-login">
+    <div class="modal-background"></div>
+    <div class="modal-card">
+        <header class="modal-card-head">
+            <p class="modal-card-title">Login</p>
+            <button onclick='$("#modal-login").removeClass("is-active")' class="delete" aria-label="close"></button>
+        </header>
+        <section class="modal-card-body">
+            <form action="../4034974e__login.html" method="post">
+                <label for="username">Username</label>
+                <input class="input is-info" type="text" name="username" id="username" value="">
+                <label for="password">Password</label>
+                <input class="input is-info" type="password" name="password" id="password" value="">
+                <input class="button is-info mt-6" type="submit" value="Login">
+            </form>
+        </section>
+    </div>
+</div>
+            </div>
+        </div>
+    </div>
+</nav>
+
+        <nav class="breadcrumb mt-6" aria-label="breadcrumbs">
+            <ul>
+                <li><a href="../b8e04c75__collections.html">Collections</a></li>
+                <li><a href="../collection/bef6c478__Sound%20Player.html">Sound Player</a></li>
+                <li class="is-active"><a>a sound player</a></li>
+                <li><a href="a%20sound%20player/0614b092__graphs.html">graphs</a> <a href="a%20sound%20player/3e04f88a__history.html">history</a> <a href="a%20sound%20player/784c6db3__details.html">details</a></li>
+            </ul>
+        </nav>
+
+        <h1 class="title">a sound player is <b id="a-sound-player">
+            <label class="ml-6" id="a-sound-player-label">Off</label>
+            <span class="icon has-text-dark ml-2">
+                <i id="a-sound-player-icon" class="far fa-play-circle"></i>
+            </span>
+        </b>
+        </h1>
+
+        <div class="tile is-ancestor is-vertical mt-6">
+            
+
+                
+                    <form class="tile is-parent box" action="./0a7b36e5__a%20sound%20player.html" method="POST" id="form-a-sound-player-14">
+                        <input type="hidden" name="module" value="home.appliance.sound.player.event.forced.event">
+                        <input type="hidden" name="klass" value="Event">
+                        <div class="tile is-child is-3">
+    <label for="a-sound-player-14-label">Is it forced?</label>
+</div>
+<div class="tile is-child pr-6">
+    <span class="icon has-text-info">
+        <i id="a-sound-player-14-icon" class="home.appliance.sound.player.event.forced.event.Event.Not"></i>
+    </span>
+
+    <div class="select is-info">
+            <select name="value" id="a-sound-player-14" form="form-a-sound-player-14" onchange="ajaxPostValue('', 'home.appliance.sound.player.event.forced.event', 'Event', $('#a-sound-player-14 option:selected').val())">
+                
+                    <option value="On">on</option>
+                
+                    <option value="Off">off</option>
+                
+                    <option value="CircadianRhythm">circadian rhythm</option>
+                
+                    <option value="Not" selected>no</option>
+                
+            </select>
+    </div>
+
+</div>
+
+                        
+                        <div class="tile is-child is-1">
+                            <a onclick='$("#modal-a-sound-player-14-enabled").addClass("is-active")'>
+                            <span class="icon has-text-info">
+                                <i class="fas fa-plus"></i>
+                            </span>
+                            </a>
+                        </div>
+                        
+                    </form>
+                    <div class="modal" id="modal-a-sound-player-14-enabled">
+    <div class="modal-background"></div>
+    <div class="modal-card">
+        <header class="modal-card-head">
+            <p class="modal-card-title">Actions on events: <br><em>Is it forced?</em></p>
+            <button onclick='$("#modal-a-sound-player-14-enabled").removeClass("is-active")' class="delete" aria-label="close"></button>
+        </header>
+        <section class="modal-card-body">
+
+            <div>
+                Events of type <b>Is it forced?</b>
+                <div>
+                    <label class="checkbox">
+                        Enable processing for <b>a sound player</b>:
+                        <input name="value" id="a-sound-player-14-enabled" class="double ml-2" type="checkbox" checked onchange="ajaxPostValue('/appliance/a%20sound%20player/enable',
+                                       'home.appliance.sound.player.event.forced.event', 'Event',
+                                       $('#a-sound-player-14-enabled').prop('checked'))">
+                    </label>
+                </div>
+                <div class="mt-4">
+                    <button class="button is-info" onclick="ajaxPostValue('/appliance/a%20sound%20player/apply_to_others',
+                                    'home.appliance.sound.player.event.forced.event', 'Event',
+                                    $('#a-sound-player-14-enabled').prop('checked'));
+                                    $('#modal-a-sound-player-14-enabled').removeClass('is-active')">
+                        Apply to all similar appliances
+                    </button>
+                </div>
+                <div class="mt-4">
+                    <button class="button is-info" onclick="ajaxPostValue('/appliance/a%20sound%20player/apply_to_collection',
+                                    'home.appliance.sound.player.event.forced.event', 'Event',
+                                    $('#a-sound-player-14-enabled').prop('checked'));
+                                    $('#modal-a-sound-player-14-enabled').removeClass('is-active')">
+                        Apply to similar appliances in the same collection
+                    </button>
+                </div>
+            </div>
+
+
+            <div class="mt-4">
+                Event <b>Is it forced?: no</b>
+                <div class="mt-4">
+                    <button class="button is-info" onclick="ajaxPostSimple('/appliance/a%20sound%20player/send_to_others',
+                                    'home.appliance.sound.player.event.forced.event', 'Event');
+                                    $('#modal-a-sound-player-14-enabled').removeClass('is-active')">
+                        Send to all similar appliances
+                    </button>
+                </div>
+                <div class="mt-4">
+                    <button class="button is-info" onclick="ajaxPostSimple('/appliance/a%20sound%20player/send_to_collection',
+                                    'home.appliance.sound.player.event.forced.event', 'Event');
+                                    $('#modal-a-sound-player-14-enabled').removeClass('is-active')">
+                        Send to similar appliances in the same collection
+                    </button>
+                </div>
+            </div>
+        </section>
+    </div>
+</div>
+                
+
+            
+
+                
+                    <form class="tile is-parent box" style="display: none;" action="./0a7b36e5__a%20sound%20player.html" method="POST" id="form-a-sound-player-13">
+                        <input type="hidden" name="module" value="home.event.elapsed">
+                        <input type="hidden" name="klass" value="Event">
+                        <div class="tile is-child is-3">
+    <label for="a-sound-player-13-label">Elapsed</label>
+</div>
+<div class="tile is-child pr-6">
+    <span class="icon has-text-info">
+        <i id="a-sound-player-13-icon" class="far fa-stop-circle"></i>
+    </span>
+
+    <div class="select is-info">
+            <select name="value" id="a-sound-player-13" form="form-a-sound-player-13" onchange="ajaxPostValue('', 'home.event.elapsed', 'Event', $('#a-sound-player-13 option:selected').val())">
+                
+                    <option value="On">yes</option>
+                
+                    <option value="Off" selected>no</option>
+                
+            </select>
+    </div>
+
+</div>
+
+                        
+                        <div class="tile is-child is-1">
+                            <a onclick='$("#modal-a-sound-player-13-enabled").addClass("is-active")'>
+                            <span class="icon has-text-info">
+                                <i class="fas fa-plus"></i>
+                            </span>
+                            </a>
+                        </div>
+                        
+                    </form>
+                    <div class="modal" id="modal-a-sound-player-13-enabled">
+    <div class="modal-background"></div>
+    <div class="modal-card">
+        <header class="modal-card-head">
+            <p class="modal-card-title">Actions on events: <br><em>Elapsed</em></p>
+            <button onclick='$("#modal-a-sound-player-13-enabled").removeClass("is-active")' class="delete" aria-label="close"></button>
+        </header>
+        <section class="modal-card-body">
+
+            <div>
+                Events of type <b>Elapsed</b>
+                <div>
+                    <label class="checkbox">
+                        Enable processing for <b>a sound player</b>:
+                        <input name="value" id="a-sound-player-13-enabled" class="double ml-2" type="checkbox" checked onchange="ajaxPostValue('/appliance/a%20sound%20player/enable',
+                                       'home.event.elapsed', 'Event',
+                                       $('#a-sound-player-13-enabled').prop('checked'))">
+                    </label>
+                </div>
+                <div class="mt-4">
+                    <button class="button is-info" onclick="ajaxPostValue('/appliance/a%20sound%20player/apply_to_others',
+                                    'home.event.elapsed', 'Event',
+                                    $('#a-sound-player-13-enabled').prop('checked'));
+                                    $('#modal-a-sound-player-13-enabled').removeClass('is-active')">
+                        Apply to all similar appliances
+                    </button>
+                </div>
+                <div class="mt-4">
+                    <button class="button is-info" onclick="ajaxPostValue('/appliance/a%20sound%20player/apply_to_collection',
+                                    'home.event.elapsed', 'Event',
+                                    $('#a-sound-player-13-enabled').prop('checked'));
+                                    $('#modal-a-sound-player-13-enabled').removeClass('is-active')">
+                        Apply to similar appliances in the same collection
+                    </button>
+                </div>
+            </div>
+
+
+            <div class="mt-4">
+                Event <b>Elapsed: no</b>
+                <div class="mt-4">
+                    <button class="button is-info" onclick="ajaxPostSimple('/appliance/a%20sound%20player/send_to_others',
+                                    'home.event.elapsed', 'Event');
+                                    $('#modal-a-sound-player-13-enabled').removeClass('is-active')">
+                        Send to all similar appliances
+                    </button>
+                </div>
+                <div class="mt-4">
+                    <button class="button is-info" onclick="ajaxPostSimple('/appliance/a%20sound%20player/send_to_collection',
+                                    'home.event.elapsed', 'Event');
+                                    $('#modal-a-sound-player-13-enabled').removeClass('is-active')">
+                        Send to similar appliances in the same collection
+                    </button>
+                </div>
+            </div>
+        </section>
+    </div>
+</div>
+                
+
+            
+
+                
+                    <form class="tile is-parent box" action="./0a7b36e5__a%20sound%20player.html" method="POST" id="form-a-sound-player-12">
+                        <input type="hidden" name="module" value="home.event.presence">
+                        <input type="hidden" name="klass" value="Event">
+                        <div class="tile is-child is-3">
+    <label for="a-sound-player-12-label">Is someone at home?</label>
+</div>
+<div class="tile is-child pr-6">
+    <span class="icon has-text-info">
+        <i id="a-sound-player-12-icon" class="fas fa-house-user"></i>
+    </span>
+
+    <div class="select is-info">
+            <select name="value" id="a-sound-player-12" form="form-a-sound-player-12" onchange="ajaxPostValue('', 'home.event.presence', 'Event', $('#a-sound-player-12 option:selected').val())">
+                
+                    <option value="On" selected>yes</option>
+                
+                    <option value="Off">no</option>
+                
+            </select>
+    </div>
+
+</div>
+
+                        
+                        <div class="tile is-child is-1">
+                            <a onclick='$("#modal-a-sound-player-12-enabled").addClass("is-active")'>
+                            <span class="icon has-text-info">
+                                <i class="fas fa-plus"></i>
+                            </span>
+                            </a>
+                        </div>
+                        
+                    </form>
+                    <div class="modal" id="modal-a-sound-player-12-enabled">
+    <div class="modal-background"></div>
+    <div class="modal-card">
+        <header class="modal-card-head">
+            <p class="modal-card-title">Actions on events: <br><em>Is someone at home?</em></p>
+            <button onclick='$("#modal-a-sound-player-12-enabled").removeClass("is-active")' class="delete" aria-label="close"></button>
+        </header>
+        <section class="modal-card-body">
+
+            <div>
+                Events of type <b>Is someone at home?</b>
+                <div>
+                    <label class="checkbox">
+                        Enable processing for <b>a sound player</b>:
+                        <input name="value" id="a-sound-player-12-enabled" class="double ml-2" type="checkbox" checked onchange="ajaxPostValue('/appliance/a%20sound%20player/enable',
+                                       'home.event.presence', 'Event',
+                                       $('#a-sound-player-12-enabled').prop('checked'))">
+                    </label>
+                </div>
+                <div class="mt-4">
+                    <button class="button is-info" onclick="ajaxPostValue('/appliance/a%20sound%20player/apply_to_others',
+                                    'home.event.presence', 'Event',
+                                    $('#a-sound-player-12-enabled').prop('checked'));
+                                    $('#modal-a-sound-player-12-enabled').removeClass('is-active')">
+                        Apply to all similar appliances
+                    </button>
+                </div>
+                <div class="mt-4">
+                    <button class="button is-info" onclick="ajaxPostValue('/appliance/a%20sound%20player/apply_to_collection',
+                                    'home.event.presence', 'Event',
+                                    $('#a-sound-player-12-enabled').prop('checked'));
+                                    $('#modal-a-sound-player-12-enabled').removeClass('is-active')">
+                        Apply to similar appliances in the same collection
+                    </button>
+                </div>
+            </div>
+
+
+            <div class="mt-4">
+                Event <b>Is someone at home?: yes</b>
+                <div class="mt-4">
+                    <button class="button is-info" onclick="ajaxPostSimple('/appliance/a%20sound%20player/send_to_others',
+                                    'home.event.presence', 'Event');
+                                    $('#modal-a-sound-player-12-enabled').removeClass('is-active')">
+                        Send to all similar appliances
+                    </button>
+                </div>
+                <div class="mt-4">
+                    <button class="button is-info" onclick="ajaxPostSimple('/appliance/a%20sound%20player/send_to_collection',
+                                    'home.event.presence', 'Event');
+                                    $('#modal-a-sound-player-12-enabled').removeClass('is-active')">
+                        Send to similar appliances in the same collection
+                    </button>
+                </div>
+            </div>
+        </section>
+    </div>
+</div>
+                
+
+            
+
+                
+                    <form class="tile is-parent box" action="./0a7b36e5__a%20sound%20player.html" method="POST" id="form-a-sound-player-11">
+                        <input type="hidden" name="module" value="home.event.sleepiness">
+                        <input type="hidden" name="klass" value="Event">
+                        <div class="tile is-child is-3">
+    <label for="a-sound-player-11-label">User is</label>
+</div>
+<div class="tile is-child pr-6">
+    <span class="icon has-text-info">
+        <i id="a-sound-player-11-icon" class="fas fa-couch"></i>
+    </span>
+
+    <div class="select is-info">
+            <select name="value" id="a-sound-player-11" form="form-a-sound-player-11" onchange="ajaxPostValue('', 'home.event.sleepiness', 'Event', $('#a-sound-player-11 option:selected').val())">
+                
+                    <option value="Asleep">asleep</option>
+                
+                    <option value="Awake">awake</option>
+                
+                    <option value="Sleepy" selected>sleepy</option>
+                
+            </select>
+    </div>
+
+</div>
+
+                        
+                        <div class="tile is-child is-1">
+                            <a onclick='$("#modal-a-sound-player-11-enabled").addClass("is-active")'>
+                            <span class="icon has-text-info">
+                                <i class="fas fa-plus"></i>
+                            </span>
+                            </a>
+                        </div>
+                        
+                    </form>
+                    <div class="modal" id="modal-a-sound-player-11-enabled">
+    <div class="modal-background"></div>
+    <div class="modal-card">
+        <header class="modal-card-head">
+            <p class="modal-card-title">Actions on events: <br><em>User is</em></p>
+            <button onclick='$("#modal-a-sound-player-11-enabled").removeClass("is-active")' class="delete" aria-label="close"></button>
+        </header>
+        <section class="modal-card-body">
+
+            <div>
+                Events of type <b>User is</b>
+                <div>
+                    <label class="checkbox">
+                        Enable processing for <b>a sound player</b>:
+                        <input name="value" id="a-sound-player-11-enabled" class="double ml-2" type="checkbox" checked onchange="ajaxPostValue('/appliance/a%20sound%20player/enable',
+                                       'home.event.sleepiness', 'Event',
+                                       $('#a-sound-player-11-enabled').prop('checked'))">
+                    </label>
+                </div>
+                <div class="mt-4">
+                    <button class="button is-info" onclick="ajaxPostValue('/appliance/a%20sound%20player/apply_to_others',
+                                    'home.event.sleepiness', 'Event',
+                                    $('#a-sound-player-11-enabled').prop('checked'));
+                                    $('#modal-a-sound-player-11-enabled').removeClass('is-active')">
+                        Apply to all similar appliances
+                    </button>
+                </div>
+                <div class="mt-4">
+                    <button class="button is-info" onclick="ajaxPostValue('/appliance/a%20sound%20player/apply_to_collection',
+                                    'home.event.sleepiness', 'Event',
+                                    $('#a-sound-player-11-enabled').prop('checked'));
+                                    $('#modal-a-sound-player-11-enabled').removeClass('is-active')">
+                        Apply to similar appliances in the same collection
+                    </button>
+                </div>
+            </div>
+
+
+            <div class="mt-4">
+                Event <b>User is: sleepy</b>
+                <div class="mt-4">
+                    <button class="button is-info" onclick="ajaxPostSimple('/appliance/a%20sound%20player/send_to_others',
+                                    'home.event.sleepiness', 'Event');
+                                    $('#modal-a-sound-player-11-enabled').removeClass('is-active')">
+                        Send to all similar appliances
+                    </button>
+                </div>
+                <div class="mt-4">
+                    <button class="button is-info" onclick="ajaxPostSimple('/appliance/a%20sound%20player/send_to_collection',
+                                    'home.event.sleepiness', 'Event');
+                                    $('#modal-a-sound-player-11-enabled').removeClass('is-active')">
+                        Send to similar appliances in the same collection
+                    </button>
+                </div>
+            </div>
+        </section>
+    </div>
+</div>
+                
+
+            
+
+                
+                    <form class="tile is-parent box" style="display: none;" action="./0a7b36e5__a%20sound%20player.html" method="POST" id="form-a-sound-player-10">
+                        <input type="hidden" name="module" value="home.event.user">
+                        <input type="hidden" name="klass" value="Event">
+                        <div class="tile is-child is-3">
+    <label for="a-sound-player-10-label">User</label>
+</div>
+<div class="tile is-child pr-6">
+    <span class="icon has-text-info">
+        <i id="a-sound-player-10-icon" class="home.event.user.Event.C"></i>
+    </span>
+
+    <div class="select is-info">
+            <select name="value" id="a-sound-player-10" form="form-a-sound-player-10" onchange="ajaxPostValue('', 'home.event.user', 'Event', $('#a-sound-player-10 option:selected').val())">
+                
+                    <option value="A">A</option>
+                
+                    <option value="B">B</option>
+                
+                    <option value="C" selected>C</option>
+                
+            </select>
+    </div>
+
+</div>
+
+                        
+                        <div class="tile is-child is-1">
+                            <a onclick='$("#modal-a-sound-player-10-enabled").addClass("is-active")'>
+                            <span class="icon has-text-info">
+                                <i class="fas fa-plus"></i>
+                            </span>
+                            </a>
+                        </div>
+                        
+                    </form>
+                    <div class="modal" id="modal-a-sound-player-10-enabled">
+    <div class="modal-background"></div>
+    <div class="modal-card">
+        <header class="modal-card-head">
+            <p class="modal-card-title">Actions on events: <br><em>User</em></p>
+            <button onclick='$("#modal-a-sound-player-10-enabled").removeClass("is-active")' class="delete" aria-label="close"></button>
+        </header>
+        <section class="modal-card-body">
+
+            <div>
+                Events of type <b>User</b>
+                <div>
+                    <label class="checkbox">
+                        Enable processing for <b>a sound player</b>:
+                        <input name="value" id="a-sound-player-10-enabled" class="double ml-2" type="checkbox" checked onchange="ajaxPostValue('/appliance/a%20sound%20player/enable',
+                                       'home.event.user', 'Event',
+                                       $('#a-sound-player-10-enabled').prop('checked'))">
+                    </label>
+                </div>
+                <div class="mt-4">
+                    <button class="button is-info" onclick="ajaxPostValue('/appliance/a%20sound%20player/apply_to_others',
+                                    'home.event.user', 'Event',
+                                    $('#a-sound-player-10-enabled').prop('checked'));
+                                    $('#modal-a-sound-player-10-enabled').removeClass('is-active')">
+                        Apply to all similar appliances
+                    </button>
+                </div>
+                <div class="mt-4">
+                    <button class="button is-info" onclick="ajaxPostValue('/appliance/a%20sound%20player/apply_to_collection',
+                                    'home.event.user', 'Event',
+                                    $('#a-sound-player-10-enabled').prop('checked'));
+                                    $('#modal-a-sound-player-10-enabled').removeClass('is-active')">
+                        Apply to similar appliances in the same collection
+                    </button>
+                </div>
+            </div>
+
+
+            <div class="mt-4">
+                Event <b>User: C</b>
+                <div class="mt-4">
+                    <button class="button is-info" onclick="ajaxPostSimple('/appliance/a%20sound%20player/send_to_others',
+                                    'home.event.user', 'Event');
+                                    $('#modal-a-sound-player-10-enabled').removeClass('is-active')">
+                        Send to all similar appliances
+                    </button>
+                </div>
+                <div class="mt-4">
+                    <button class="button is-info" onclick="ajaxPostSimple('/appliance/a%20sound%20player/send_to_collection',
+                                    'home.event.user', 'Event');
+                                    $('#modal-a-sound-player-10-enabled').removeClass('is-active')">
+                        Send to similar appliances in the same collection
+                    </button>
+                </div>
+            </div>
+        </section>
+    </div>
+</div>
+                
+
+            
+
+                
+                    <form class="tile is-parent box" action="./0a7b36e5__a%20sound%20player.html" method="POST" id="form-a-sound-player-9">
+                        <input type="hidden" name="module" value="home.appliance.sound.player.event.sleepy_volume">
+                        <input type="hidden" name="klass" value="Event">
+                        <div class="tile is-child is-3">
+    <label for="a-sound-player-9-label">Sleepy Volume</label>
+</div>
+<div class="tile is-child pr-6">
+    
+    <input class="input is-info" type="number" min="0" max="100" name="value" id="a-sound-player-9" value="10" onchange="ajaxPostValue('', 'home.appliance.sound.player.event.sleepy_volume', 'Event', $('#a-sound-player-9').val())">
+    
+</div>
+<div class="modal" id="modal-a-sound-player-9-enabled">
+    <div class="modal-background"></div>
+    <div class="modal-card">
+        <header class="modal-card-head">
+            <p class="modal-card-title">Actions on events: <br><em>Sleepy Volume</em></p>
+            <button onclick='$("#modal-a-sound-player-9-enabled").removeClass("is-active")' class="delete" aria-label="close"></button>
+        </header>
+        <section class="modal-card-body">
+
+            <div>
+                Events of type <b>Sleepy Volume</b>
+                <div>
+                    <label class="checkbox">
+                        Enable processing for <b>a sound player</b>:
+                        <input name="value" id="a-sound-player-9-enabled" class="double ml-2" type="checkbox" checked onchange="ajaxPostValue('/appliance/a%20sound%20player/enable',
+                                       'home.appliance.sound.player.event.sleepy_volume', 'Event',
+                                       $('#a-sound-player-9-enabled').prop('checked'))">
+                    </label>
+                </div>
+                <div class="mt-4">
+                    <button class="button is-info" onclick="ajaxPostValue('/appliance/a%20sound%20player/apply_to_others',
+                                    'home.appliance.sound.player.event.sleepy_volume', 'Event',
+                                    $('#a-sound-player-9-enabled').prop('checked'));
+                                    $('#modal-a-sound-player-9-enabled').removeClass('is-active')">
+                        Apply to all similar appliances
+                    </button>
+                </div>
+                <div class="mt-4">
+                    <button class="button is-info" onclick="ajaxPostValue('/appliance/a%20sound%20player/apply_to_collection',
+                                    'home.appliance.sound.player.event.sleepy_volume', 'Event',
+                                    $('#a-sound-player-9-enabled').prop('checked'));
+                                    $('#modal-a-sound-player-9-enabled').removeClass('is-active')">
+                        Apply to similar appliances in the same collection
+                    </button>
+                </div>
+            </div>
+
+
+            <div class="mt-4">
+                Event <b>Sleepy Volume: 10</b>
+                <div class="mt-4">
+                    <button class="button is-info" onclick="ajaxPostSimple('/appliance/a%20sound%20player/send_to_others',
+                                    'home.appliance.sound.player.event.sleepy_volume', 'Event');
+                                    $('#modal-a-sound-player-9-enabled').removeClass('is-active')">
+                        Send to all similar appliances
+                    </button>
+                </div>
+                <div class="mt-4">
+                    <button class="button is-info" onclick="ajaxPostSimple('/appliance/a%20sound%20player/send_to_collection',
+                                    'home.appliance.sound.player.event.sleepy_volume', 'Event');
+                                    $('#modal-a-sound-player-9-enabled').removeClass('is-active')">
+                        Send to similar appliances in the same collection
+                    </button>
+                </div>
+            </div>
+        </section>
+    </div>
+</div>
+
+
+                        
+                        <div class="tile is-child is-1">
+                            <a onclick='$("#modal-a-sound-player-9-enabled").addClass("is-active")'>
+                            <span class="icon has-text-info">
+                                <i class="fas fa-plus"></i>
+                            </span>
+                            </a>
+                        </div>
+                        
+                    </form>
+                    <div class="modal" id="modal-a-sound-player-9-enabled">
+    <div class="modal-background"></div>
+    <div class="modal-card">
+        <header class="modal-card-head">
+            <p class="modal-card-title">Actions on events: <br><em>Sleepy Volume</em></p>
+            <button onclick='$("#modal-a-sound-player-9-enabled").removeClass("is-active")' class="delete" aria-label="close"></button>
+        </header>
+        <section class="modal-card-body">
+
+            <div>
+                Events of type <b>Sleepy Volume</b>
+                <div>
+                    <label class="checkbox">
+                        Enable processing for <b>a sound player</b>:
+                        <input name="value" id="a-sound-player-9-enabled" class="double ml-2" type="checkbox" checked onchange="ajaxPostValue('/appliance/a%20sound%20player/enable',
+                                       'home.appliance.sound.player.event.sleepy_volume', 'Event',
+                                       $('#a-sound-player-9-enabled').prop('checked'))">
+                    </label>
+                </div>
+                <div class="mt-4">
+                    <button class="button is-info" onclick="ajaxPostValue('/appliance/a%20sound%20player/apply_to_others',
+                                    'home.appliance.sound.player.event.sleepy_volume', 'Event',
+                                    $('#a-sound-player-9-enabled').prop('checked'));
+                                    $('#modal-a-sound-player-9-enabled').removeClass('is-active')">
+                        Apply to all similar appliances
+                    </button>
+                </div>
+                <div class="mt-4">
+                    <button class="button is-info" onclick="ajaxPostValue('/appliance/a%20sound%20player/apply_to_collection',
+                                    'home.appliance.sound.player.event.sleepy_volume', 'Event',
+                                    $('#a-sound-player-9-enabled').prop('checked'));
+                                    $('#modal-a-sound-player-9-enabled').removeClass('is-active')">
+                        Apply to similar appliances in the same collection
+                    </button>
+                </div>
+            </div>
+
+
+            <div class="mt-4">
+                Event <b>Sleepy Volume: 10</b>
+                <div class="mt-4">
+                    <button class="button is-info" onclick="ajaxPostSimple('/appliance/a%20sound%20player/send_to_others',
+                                    'home.appliance.sound.player.event.sleepy_volume', 'Event');
+                                    $('#modal-a-sound-player-9-enabled').removeClass('is-active')">
+                        Send to all similar appliances
+                    </button>
+                </div>
+                <div class="mt-4">
+                    <button class="button is-info" onclick="ajaxPostSimple('/appliance/a%20sound%20player/send_to_collection',
+                                    'home.appliance.sound.player.event.sleepy_volume', 'Event');
+                                    $('#modal-a-sound-player-9-enabled').removeClass('is-active')">
+                        Send to similar appliances in the same collection
+                    </button>
+                </div>
+            </div>
+        </section>
+    </div>
+</div>
+                
+
+            
+
+                
+                    <form class="tile is-parent box" action="./0a7b36e5__a%20sound%20player.html" method="POST" id="form-a-sound-player-8">
+                        <input type="hidden" name="module" value="home.appliance.sound.player.event.volume">
+                        <input type="hidden" name="klass" value="Event">
+                        <div class="tile is-child is-3">
+    <label for="a-sound-player-8-label">Volume</label>
+</div>
+<div class="tile is-child pr-6">
+    
+    <input class="input is-info" type="number" min="0" max="100" name="value" id="a-sound-player-8" value="20" onchange="ajaxPostValue('', 'home.appliance.sound.player.event.volume', 'Event', $('#a-sound-player-8').val())">
+    
+</div>
+<div class="modal" id="modal-a-sound-player-8-enabled">
+    <div class="modal-background"></div>
+    <div class="modal-card">
+        <header class="modal-card-head">
+            <p class="modal-card-title">Actions on events: <br><em>Volume</em></p>
+            <button onclick='$("#modal-a-sound-player-8-enabled").removeClass("is-active")' class="delete" aria-label="close"></button>
+        </header>
+        <section class="modal-card-body">
+
+            <div>
+                Events of type <b>Volume</b>
+                <div>
+                    <label class="checkbox">
+                        Enable processing for <b>a sound player</b>:
+                        <input name="value" id="a-sound-player-8-enabled" class="double ml-2" type="checkbox" checked onchange="ajaxPostValue('/appliance/a%20sound%20player/enable',
+                                       'home.appliance.sound.player.event.volume', 'Event',
+                                       $('#a-sound-player-8-enabled').prop('checked'))">
+                    </label>
+                </div>
+                <div class="mt-4">
+                    <button class="button is-info" onclick="ajaxPostValue('/appliance/a%20sound%20player/apply_to_others',
+                                    'home.appliance.sound.player.event.volume', 'Event',
+                                    $('#a-sound-player-8-enabled').prop('checked'));
+                                    $('#modal-a-sound-player-8-enabled').removeClass('is-active')">
+                        Apply to all similar appliances
+                    </button>
+                </div>
+                <div class="mt-4">
+                    <button class="button is-info" onclick="ajaxPostValue('/appliance/a%20sound%20player/apply_to_collection',
+                                    'home.appliance.sound.player.event.volume', 'Event',
+                                    $('#a-sound-player-8-enabled').prop('checked'));
+                                    $('#modal-a-sound-player-8-enabled').removeClass('is-active')">
+                        Apply to similar appliances in the same collection
+                    </button>
+                </div>
+            </div>
+
+
+            <div class="mt-4">
+                Event <b>Volume: 20</b>
+                <div class="mt-4">
+                    <button class="button is-info" onclick="ajaxPostSimple('/appliance/a%20sound%20player/send_to_others',
+                                    'home.appliance.sound.player.event.volume', 'Event');
+                                    $('#modal-a-sound-player-8-enabled').removeClass('is-active')">
+                        Send to all similar appliances
+                    </button>
+                </div>
+                <div class="mt-4">
+                    <button class="button is-info" onclick="ajaxPostSimple('/appliance/a%20sound%20player/send_to_collection',
+                                    'home.appliance.sound.player.event.volume', 'Event');
+                                    $('#modal-a-sound-player-8-enabled').removeClass('is-active')">
+                        Send to similar appliances in the same collection
+                    </button>
+                </div>
+            </div>
+        </section>
+    </div>
+</div>
+
+
+                        
+                        <div class="tile is-child is-1">
+                            <a onclick='$("#modal-a-sound-player-8-enabled").addClass("is-active")'>
+                            <span class="icon has-text-info">
+                                <i class="fas fa-plus"></i>
+                            </span>
+                            </a>
+                        </div>
+                        
+                    </form>
+                    <div class="modal" id="modal-a-sound-player-8-enabled">
+    <div class="modal-background"></div>
+    <div class="modal-card">
+        <header class="modal-card-head">
+            <p class="modal-card-title">Actions on events: <br><em>Volume</em></p>
+            <button onclick='$("#modal-a-sound-player-8-enabled").removeClass("is-active")' class="delete" aria-label="close"></button>
+        </header>
+        <section class="modal-card-body">
+
+            <div>
+                Events of type <b>Volume</b>
+                <div>
+                    <label class="checkbox">
+                        Enable processing for <b>a sound player</b>:
+                        <input name="value" id="a-sound-player-8-enabled" class="double ml-2" type="checkbox" checked onchange="ajaxPostValue('/appliance/a%20sound%20player/enable',
+                                       'home.appliance.sound.player.event.volume', 'Event',
+                                       $('#a-sound-player-8-enabled').prop('checked'))">
+                    </label>
+                </div>
+                <div class="mt-4">
+                    <button class="button is-info" onclick="ajaxPostValue('/appliance/a%20sound%20player/apply_to_others',
+                                    'home.appliance.sound.player.event.volume', 'Event',
+                                    $('#a-sound-player-8-enabled').prop('checked'));
+                                    $('#modal-a-sound-player-8-enabled').removeClass('is-active')">
+                        Apply to all similar appliances
+                    </button>
+                </div>
+                <div class="mt-4">
+                    <button class="button is-info" onclick="ajaxPostValue('/appliance/a%20sound%20player/apply_to_collection',
+                                    'home.appliance.sound.player.event.volume', 'Event',
+                                    $('#a-sound-player-8-enabled').prop('checked'));
+                                    $('#modal-a-sound-player-8-enabled').removeClass('is-active')">
+                        Apply to similar appliances in the same collection
+                    </button>
+                </div>
+            </div>
+
+
+            <div class="mt-4">
+                Event <b>Volume: 20</b>
+                <div class="mt-4">
+                    <button class="button is-info" onclick="ajaxPostSimple('/appliance/a%20sound%20player/send_to_others',
+                                    'home.appliance.sound.player.event.volume', 'Event');
+                                    $('#modal-a-sound-player-8-enabled').removeClass('is-active')">
+                        Send to all similar appliances
+                    </button>
+                </div>
+                <div class="mt-4">
+                    <button class="button is-info" onclick="ajaxPostSimple('/appliance/a%20sound%20player/send_to_collection',
+                                    'home.appliance.sound.player.event.volume', 'Event');
+                                    $('#modal-a-sound-player-8-enabled').removeClass('is-active')">
+                        Send to similar appliances in the same collection
+                    </button>
+                </div>
+            </div>
+        </section>
+    </div>
+</div>
+                
+
+            
+
+                
+                    <form class="tile is-parent box" action="./0a7b36e5__a%20sound%20player.html" method="POST" id="form-a-sound-player-7">
+                        <input type="hidden" name="module" value="home.appliance.sound.player.event.playlist">
+                        <input type="hidden" name="klass" value="Event">
+                        <div class="tile is-child is-3">
+    <label for="a-sound-player-7-label">Playlist</label>
+</div>
+<div class="tile is-child pr-6">
+    
+    <input class="input is-info" type="text" name="value" id="a-sound-player-7" value="Common" onchange="ajaxPostValue('', 'home.appliance.sound.player.event.playlist', 'Event', $('#a-sound-player-7').val())">
+    
+</div>
+<div class="modal" id="modal-a-sound-player-7-enabled">
+    <div class="modal-background"></div>
+    <div class="modal-card">
+        <header class="modal-card-head">
+            <p class="modal-card-title">Actions on events: <br><em>Playlist</em></p>
+            <button onclick='$("#modal-a-sound-player-7-enabled").removeClass("is-active")' class="delete" aria-label="close"></button>
+        </header>
+        <section class="modal-card-body">
+
+            <div>
+                Events of type <b>Playlist</b>
+                <div>
+                    <label class="checkbox">
+                        Enable processing for <b>a sound player</b>:
+                        <input name="value" id="a-sound-player-7-enabled" class="double ml-2" type="checkbox" checked onchange="ajaxPostValue('/appliance/a%20sound%20player/enable',
+                                       'home.appliance.sound.player.event.playlist', 'Event',
+                                       $('#a-sound-player-7-enabled').prop('checked'))">
+                    </label>
+                </div>
+                <div class="mt-4">
+                    <button class="button is-info" onclick="ajaxPostValue('/appliance/a%20sound%20player/apply_to_others',
+                                    'home.appliance.sound.player.event.playlist', 'Event',
+                                    $('#a-sound-player-7-enabled').prop('checked'));
+                                    $('#modal-a-sound-player-7-enabled').removeClass('is-active')">
+                        Apply to all similar appliances
+                    </button>
+                </div>
+                <div class="mt-4">
+                    <button class="button is-info" onclick="ajaxPostValue('/appliance/a%20sound%20player/apply_to_collection',
+                                    'home.appliance.sound.player.event.playlist', 'Event',
+                                    $('#a-sound-player-7-enabled').prop('checked'));
+                                    $('#modal-a-sound-player-7-enabled').removeClass('is-active')">
+                        Apply to similar appliances in the same collection
+                    </button>
+                </div>
+            </div>
+
+
+            <div class="mt-4">
+                Event <b>Playlist: Common</b>
+                <div class="mt-4">
+                    <button class="button is-info" onclick="ajaxPostSimple('/appliance/a%20sound%20player/send_to_others',
+                                    'home.appliance.sound.player.event.playlist', 'Event');
+                                    $('#modal-a-sound-player-7-enabled').removeClass('is-active')">
+                        Send to all similar appliances
+                    </button>
+                </div>
+                <div class="mt-4">
+                    <button class="button is-info" onclick="ajaxPostSimple('/appliance/a%20sound%20player/send_to_collection',
+                                    'home.appliance.sound.player.event.playlist', 'Event');
+                                    $('#modal-a-sound-player-7-enabled').removeClass('is-active')">
+                        Send to similar appliances in the same collection
+                    </button>
+                </div>
+            </div>
+        </section>
+    </div>
+</div>
+
+
+                        
+                        <div class="tile is-child is-1">
+                            <a onclick='$("#modal-a-sound-player-7-enabled").addClass("is-active")'>
+                            <span class="icon has-text-info">
+                                <i class="fas fa-plus"></i>
+                            </span>
+                            </a>
+                        </div>
+                        
+                    </form>
+                    <div class="modal" id="modal-a-sound-player-7-enabled">
+    <div class="modal-background"></div>
+    <div class="modal-card">
+        <header class="modal-card-head">
+            <p class="modal-card-title">Actions on events: <br><em>Playlist</em></p>
+            <button onclick='$("#modal-a-sound-player-7-enabled").removeClass("is-active")' class="delete" aria-label="close"></button>
+        </header>
+        <section class="modal-card-body">
+
+            <div>
+                Events of type <b>Playlist</b>
+                <div>
+                    <label class="checkbox">
+                        Enable processing for <b>a sound player</b>:
+                        <input name="value" id="a-sound-player-7-enabled" class="double ml-2" type="checkbox" checked onchange="ajaxPostValue('/appliance/a%20sound%20player/enable',
+                                       'home.appliance.sound.player.event.playlist', 'Event',
+                                       $('#a-sound-player-7-enabled').prop('checked'))">
+                    </label>
+                </div>
+                <div class="mt-4">
+                    <button class="button is-info" onclick="ajaxPostValue('/appliance/a%20sound%20player/apply_to_others',
+                                    'home.appliance.sound.player.event.playlist', 'Event',
+                                    $('#a-sound-player-7-enabled').prop('checked'));
+                                    $('#modal-a-sound-player-7-enabled').removeClass('is-active')">
+                        Apply to all similar appliances
+                    </button>
+                </div>
+                <div class="mt-4">
+                    <button class="button is-info" onclick="ajaxPostValue('/appliance/a%20sound%20player/apply_to_collection',
+                                    'home.appliance.sound.player.event.playlist', 'Event',
+                                    $('#a-sound-player-7-enabled').prop('checked'));
+                                    $('#modal-a-sound-player-7-enabled').removeClass('is-active')">
+                        Apply to similar appliances in the same collection
+                    </button>
+                </div>
+            </div>
+
+
+            <div class="mt-4">
+                Event <b>Playlist: Common</b>
+                <div class="mt-4">
+                    <button class="button is-info" onclick="ajaxPostSimple('/appliance/a%20sound%20player/send_to_others',
+                                    'home.appliance.sound.player.event.playlist', 'Event');
+                                    $('#modal-a-sound-player-7-enabled').removeClass('is-active')">
+                        Send to all similar appliances
+                    </button>
+                </div>
+                <div class="mt-4">
+                    <button class="button is-info" onclick="ajaxPostSimple('/appliance/a%20sound%20player/send_to_collection',
+                                    'home.appliance.sound.player.event.playlist', 'Event');
+                                    $('#modal-a-sound-player-7-enabled').removeClass('is-active')">
+                        Send to similar appliances in the same collection
+                    </button>
+                </div>
+            </div>
+        </section>
+    </div>
+</div>
+                
+
+            
+
+                
+                    <form class="tile is-parent box" style="display: none;" action="./0a7b36e5__a%20sound%20player.html" method="POST" id="form-a-sound-player-6">
+                        <input type="hidden" name="module" value="home.appliance.sound.player.event.forced.circadian_rhythm.playlist_a">
+                        <input type="hidden" name="klass" value="Event">
+                        <div class="tile is-child is-3">
+    <label for="a-sound-player-6-label">Playlist user A</label>
+</div>
+<div class="tile is-child pr-6">
+    
+    <input class="input is-info" type="text" name="value" id="a-sound-player-6" value="Afternoon Maja" onchange="ajaxPostValue('', 'home.appliance.sound.player.event.forced.circadian_rhythm.playlist_a', 'Event', $('#a-sound-player-6').val())">
+    
+</div>
+<div class="modal" id="modal-a-sound-player-6-enabled">
+    <div class="modal-background"></div>
+    <div class="modal-card">
+        <header class="modal-card-head">
+            <p class="modal-card-title">Actions on events: <br><em>Playlist user A</em></p>
+            <button onclick='$("#modal-a-sound-player-6-enabled").removeClass("is-active")' class="delete" aria-label="close"></button>
+        </header>
+        <section class="modal-card-body">
+
+            <div>
+                Events of type <b>Playlist user A</b>
+                <div>
+                    <label class="checkbox">
+                        Enable processing for <b>a sound player</b>:
+                        <input name="value" id="a-sound-player-6-enabled" class="double ml-2" type="checkbox" checked onchange="ajaxPostValue('/appliance/a%20sound%20player/enable',
+                                       'home.appliance.sound.player.event.forced.circadian_rhythm.playlist_a', 'Event',
+                                       $('#a-sound-player-6-enabled').prop('checked'))">
+                    </label>
+                </div>
+                <div class="mt-4">
+                    <button class="button is-info" onclick="ajaxPostValue('/appliance/a%20sound%20player/apply_to_others',
+                                    'home.appliance.sound.player.event.forced.circadian_rhythm.playlist_a', 'Event',
+                                    $('#a-sound-player-6-enabled').prop('checked'));
+                                    $('#modal-a-sound-player-6-enabled').removeClass('is-active')">
+                        Apply to all similar appliances
+                    </button>
+                </div>
+                <div class="mt-4">
+                    <button class="button is-info" onclick="ajaxPostValue('/appliance/a%20sound%20player/apply_to_collection',
+                                    'home.appliance.sound.player.event.forced.circadian_rhythm.playlist_a', 'Event',
+                                    $('#a-sound-player-6-enabled').prop('checked'));
+                                    $('#modal-a-sound-player-6-enabled').removeClass('is-active')">
+                        Apply to similar appliances in the same collection
+                    </button>
+                </div>
+            </div>
+
+
+            <div class="mt-4">
+                Event <b>Playlist user A: Afternoon Maja</b>
+                <div class="mt-4">
+                    <button class="button is-info" onclick="ajaxPostSimple('/appliance/a%20sound%20player/send_to_others',
+                                    'home.appliance.sound.player.event.forced.circadian_rhythm.playlist_a', 'Event');
+                                    $('#modal-a-sound-player-6-enabled').removeClass('is-active')">
+                        Send to all similar appliances
+                    </button>
+                </div>
+                <div class="mt-4">
+                    <button class="button is-info" onclick="ajaxPostSimple('/appliance/a%20sound%20player/send_to_collection',
+                                    'home.appliance.sound.player.event.forced.circadian_rhythm.playlist_a', 'Event');
+                                    $('#modal-a-sound-player-6-enabled').removeClass('is-active')">
+                        Send to similar appliances in the same collection
+                    </button>
+                </div>
+            </div>
+        </section>
+    </div>
+</div>
+
+
+                        
+                        <div class="tile is-child is-1">
+                            <a onclick='$("#modal-a-sound-player-6-enabled").addClass("is-active")'>
+                            <span class="icon has-text-info">
+                                <i class="fas fa-plus"></i>
+                            </span>
+                            </a>
+                        </div>
+                        
+                    </form>
+                    <div class="modal" id="modal-a-sound-player-6-enabled">
+    <div class="modal-background"></div>
+    <div class="modal-card">
+        <header class="modal-card-head">
+            <p class="modal-card-title">Actions on events: <br><em>Playlist user A</em></p>
+            <button onclick='$("#modal-a-sound-player-6-enabled").removeClass("is-active")' class="delete" aria-label="close"></button>
+        </header>
+        <section class="modal-card-body">
+
+            <div>
+                Events of type <b>Playlist user A</b>
+                <div>
+                    <label class="checkbox">
+                        Enable processing for <b>a sound player</b>:
+                        <input name="value" id="a-sound-player-6-enabled" class="double ml-2" type="checkbox" checked onchange="ajaxPostValue('/appliance/a%20sound%20player/enable',
+                                       'home.appliance.sound.player.event.forced.circadian_rhythm.playlist_a', 'Event',
+                                       $('#a-sound-player-6-enabled').prop('checked'))">
+                    </label>
+                </div>
+                <div class="mt-4">
+                    <button class="button is-info" onclick="ajaxPostValue('/appliance/a%20sound%20player/apply_to_others',
+                                    'home.appliance.sound.player.event.forced.circadian_rhythm.playlist_a', 'Event',
+                                    $('#a-sound-player-6-enabled').prop('checked'));
+                                    $('#modal-a-sound-player-6-enabled').removeClass('is-active')">
+                        Apply to all similar appliances
+                    </button>
+                </div>
+                <div class="mt-4">
+                    <button class="button is-info" onclick="ajaxPostValue('/appliance/a%20sound%20player/apply_to_collection',
+                                    'home.appliance.sound.player.event.forced.circadian_rhythm.playlist_a', 'Event',
+                                    $('#a-sound-player-6-enabled').prop('checked'));
+                                    $('#modal-a-sound-player-6-enabled').removeClass('is-active')">
+                        Apply to similar appliances in the same collection
+                    </button>
+                </div>
+            </div>
+
+
+            <div class="mt-4">
+                Event <b>Playlist user A: Afternoon Maja</b>
+                <div class="mt-4">
+                    <button class="button is-info" onclick="ajaxPostSimple('/appliance/a%20sound%20player/send_to_others',
+                                    'home.appliance.sound.player.event.forced.circadian_rhythm.playlist_a', 'Event');
+                                    $('#modal-a-sound-player-6-enabled').removeClass('is-active')">
+                        Send to all similar appliances
+                    </button>
+                </div>
+                <div class="mt-4">
+                    <button class="button is-info" onclick="ajaxPostSimple('/appliance/a%20sound%20player/send_to_collection',
+                                    'home.appliance.sound.player.event.forced.circadian_rhythm.playlist_a', 'Event');
+                                    $('#modal-a-sound-player-6-enabled').removeClass('is-active')">
+                        Send to similar appliances in the same collection
+                    </button>
+                </div>
+            </div>
+        </section>
+    </div>
+</div>
+                
+
+            
+
+                
+                    <form class="tile is-parent box" style="display: none;" action="./0a7b36e5__a%20sound%20player.html" method="POST" id="form-a-sound-player-5">
+                        <input type="hidden" name="module" value="home.appliance.sound.player.event.forced.circadian_rhythm.playlist_b">
+                        <input type="hidden" name="klass" value="Event">
+                        <div class="tile is-child is-3">
+    <label for="a-sound-player-5-label">Playlist user B</label>
+</div>
+<div class="tile is-child pr-6">
+    
+    <input class="input is-info" type="text" name="value" id="a-sound-player-5" value="Afternoon Alja" onchange="ajaxPostValue('', 'home.appliance.sound.player.event.forced.circadian_rhythm.playlist_b', 'Event', $('#a-sound-player-5').val())">
+    
+</div>
+<div class="modal" id="modal-a-sound-player-5-enabled">
+    <div class="modal-background"></div>
+    <div class="modal-card">
+        <header class="modal-card-head">
+            <p class="modal-card-title">Actions on events: <br><em>Playlist user B</em></p>
+            <button onclick='$("#modal-a-sound-player-5-enabled").removeClass("is-active")' class="delete" aria-label="close"></button>
+        </header>
+        <section class="modal-card-body">
+
+            <div>
+                Events of type <b>Playlist user B</b>
+                <div>
+                    <label class="checkbox">
+                        Enable processing for <b>a sound player</b>:
+                        <input name="value" id="a-sound-player-5-enabled" class="double ml-2" type="checkbox" checked onchange="ajaxPostValue('/appliance/a%20sound%20player/enable',
+                                       'home.appliance.sound.player.event.forced.circadian_rhythm.playlist_b', 'Event',
+                                       $('#a-sound-player-5-enabled').prop('checked'))">
+                    </label>
+                </div>
+                <div class="mt-4">
+                    <button class="button is-info" onclick="ajaxPostValue('/appliance/a%20sound%20player/apply_to_others',
+                                    'home.appliance.sound.player.event.forced.circadian_rhythm.playlist_b', 'Event',
+                                    $('#a-sound-player-5-enabled').prop('checked'));
+                                    $('#modal-a-sound-player-5-enabled').removeClass('is-active')">
+                        Apply to all similar appliances
+                    </button>
+                </div>
+                <div class="mt-4">
+                    <button class="button is-info" onclick="ajaxPostValue('/appliance/a%20sound%20player/apply_to_collection',
+                                    'home.appliance.sound.player.event.forced.circadian_rhythm.playlist_b', 'Event',
+                                    $('#a-sound-player-5-enabled').prop('checked'));
+                                    $('#modal-a-sound-player-5-enabled').removeClass('is-active')">
+                        Apply to similar appliances in the same collection
+                    </button>
+                </div>
+            </div>
+
+
+            <div class="mt-4">
+                Event <b>Playlist user B: Afternoon Alja</b>
+                <div class="mt-4">
+                    <button class="button is-info" onclick="ajaxPostSimple('/appliance/a%20sound%20player/send_to_others',
+                                    'home.appliance.sound.player.event.forced.circadian_rhythm.playlist_b', 'Event');
+                                    $('#modal-a-sound-player-5-enabled').removeClass('is-active')">
+                        Send to all similar appliances
+                    </button>
+                </div>
+                <div class="mt-4">
+                    <button class="button is-info" onclick="ajaxPostSimple('/appliance/a%20sound%20player/send_to_collection',
+                                    'home.appliance.sound.player.event.forced.circadian_rhythm.playlist_b', 'Event');
+                                    $('#modal-a-sound-player-5-enabled').removeClass('is-active')">
+                        Send to similar appliances in the same collection
+                    </button>
+                </div>
+            </div>
+        </section>
+    </div>
+</div>
+
+
+                        
+                        <div class="tile is-child is-1">
+                            <a onclick='$("#modal-a-sound-player-5-enabled").addClass("is-active")'>
+                            <span class="icon has-text-info">
+                                <i class="fas fa-plus"></i>
+                            </span>
+                            </a>
+                        </div>
+                        
+                    </form>
+                    <div class="modal" id="modal-a-sound-player-5-enabled">
+    <div class="modal-background"></div>
+    <div class="modal-card">
+        <header class="modal-card-head">
+            <p class="modal-card-title">Actions on events: <br><em>Playlist user B</em></p>
+            <button onclick='$("#modal-a-sound-player-5-enabled").removeClass("is-active")' class="delete" aria-label="close"></button>
+        </header>
+        <section class="modal-card-body">
+
+            <div>
+                Events of type <b>Playlist user B</b>
+                <div>
+                    <label class="checkbox">
+                        Enable processing for <b>a sound player</b>:
+                        <input name="value" id="a-sound-player-5-enabled" class="double ml-2" type="checkbox" checked onchange="ajaxPostValue('/appliance/a%20sound%20player/enable',
+                                       'home.appliance.sound.player.event.forced.circadian_rhythm.playlist_b', 'Event',
+                                       $('#a-sound-player-5-enabled').prop('checked'))">
+                    </label>
+                </div>
+                <div class="mt-4">
+                    <button class="button is-info" onclick="ajaxPostValue('/appliance/a%20sound%20player/apply_to_others',
+                                    'home.appliance.sound.player.event.forced.circadian_rhythm.playlist_b', 'Event',
+                                    $('#a-sound-player-5-enabled').prop('checked'));
+                                    $('#modal-a-sound-player-5-enabled').removeClass('is-active')">
+                        Apply to all similar appliances
+                    </button>
+                </div>
+                <div class="mt-4">
+                    <button class="button is-info" onclick="ajaxPostValue('/appliance/a%20sound%20player/apply_to_collection',
+                                    'home.appliance.sound.player.event.forced.circadian_rhythm.playlist_b', 'Event',
+                                    $('#a-sound-player-5-enabled').prop('checked'));
+                                    $('#modal-a-sound-player-5-enabled').removeClass('is-active')">
+                        Apply to similar appliances in the same collection
+                    </button>
+                </div>
+            </div>
+
+
+            <div class="mt-4">
+                Event <b>Playlist user B: Afternoon Alja</b>
+                <div class="mt-4">
+                    <button class="button is-info" onclick="ajaxPostSimple('/appliance/a%20sound%20player/send_to_others',
+                                    'home.appliance.sound.player.event.forced.circadian_rhythm.playlist_b', 'Event');
+                                    $('#modal-a-sound-player-5-enabled').removeClass('is-active')">
+                        Send to all similar appliances
+                    </button>
+                </div>
+                <div class="mt-4">
+                    <button class="button is-info" onclick="ajaxPostSimple('/appliance/a%20sound%20player/send_to_collection',
+                                    'home.appliance.sound.player.event.forced.circadian_rhythm.playlist_b', 'Event');
+                                    $('#modal-a-sound-player-5-enabled').removeClass('is-active')">
+                        Send to similar appliances in the same collection
+                    </button>
+                </div>
+            </div>
+        </section>
+    </div>
+</div>
+                
+
+            
+
+                
+                    <form class="tile is-parent box" style="display: none;" action="./0a7b36e5__a%20sound%20player.html" method="POST" id="form-a-sound-player-4">
+                        <input type="hidden" name="module" value="home.appliance.sound.player.event.forced.circadian_rhythm.playlist_c">
+                        <input type="hidden" name="klass" value="Event">
+                        <div class="tile is-child is-3">
+    <label for="a-sound-player-4-label">Playlist user C</label>
+</div>
+<div class="tile is-child pr-6">
+    
+    <input class="input is-info" type="text" name="value" id="a-sound-player-4" value="Afternoon Alessandro" onchange="ajaxPostValue('', 'home.appliance.sound.player.event.forced.circadian_rhythm.playlist_c', 'Event', $('#a-sound-player-4').val())">
+    
+</div>
+<div class="modal" id="modal-a-sound-player-4-enabled">
+    <div class="modal-background"></div>
+    <div class="modal-card">
+        <header class="modal-card-head">
+            <p class="modal-card-title">Actions on events: <br><em>Playlist user C</em></p>
+            <button onclick='$("#modal-a-sound-player-4-enabled").removeClass("is-active")' class="delete" aria-label="close"></button>
+        </header>
+        <section class="modal-card-body">
+
+            <div>
+                Events of type <b>Playlist user C</b>
+                <div>
+                    <label class="checkbox">
+                        Enable processing for <b>a sound player</b>:
+                        <input name="value" id="a-sound-player-4-enabled" class="double ml-2" type="checkbox" checked onchange="ajaxPostValue('/appliance/a%20sound%20player/enable',
+                                       'home.appliance.sound.player.event.forced.circadian_rhythm.playlist_c', 'Event',
+                                       $('#a-sound-player-4-enabled').prop('checked'))">
+                    </label>
+                </div>
+                <div class="mt-4">
+                    <button class="button is-info" onclick="ajaxPostValue('/appliance/a%20sound%20player/apply_to_others',
+                                    'home.appliance.sound.player.event.forced.circadian_rhythm.playlist_c', 'Event',
+                                    $('#a-sound-player-4-enabled').prop('checked'));
+                                    $('#modal-a-sound-player-4-enabled').removeClass('is-active')">
+                        Apply to all similar appliances
+                    </button>
+                </div>
+                <div class="mt-4">
+                    <button class="button is-info" onclick="ajaxPostValue('/appliance/a%20sound%20player/apply_to_collection',
+                                    'home.appliance.sound.player.event.forced.circadian_rhythm.playlist_c', 'Event',
+                                    $('#a-sound-player-4-enabled').prop('checked'));
+                                    $('#modal-a-sound-player-4-enabled').removeClass('is-active')">
+                        Apply to similar appliances in the same collection
+                    </button>
+                </div>
+            </div>
+
+
+            <div class="mt-4">
+                Event <b>Playlist user C: Afternoon Alessandro</b>
+                <div class="mt-4">
+                    <button class="button is-info" onclick="ajaxPostSimple('/appliance/a%20sound%20player/send_to_others',
+                                    'home.appliance.sound.player.event.forced.circadian_rhythm.playlist_c', 'Event');
+                                    $('#modal-a-sound-player-4-enabled').removeClass('is-active')">
+                        Send to all similar appliances
+                    </button>
+                </div>
+                <div class="mt-4">
+                    <button class="button is-info" onclick="ajaxPostSimple('/appliance/a%20sound%20player/send_to_collection',
+                                    'home.appliance.sound.player.event.forced.circadian_rhythm.playlist_c', 'Event');
+                                    $('#modal-a-sound-player-4-enabled').removeClass('is-active')">
+                        Send to similar appliances in the same collection
+                    </button>
+                </div>
+            </div>
+        </section>
+    </div>
+</div>
+
+
+                        
+                        <div class="tile is-child is-1">
+                            <a onclick='$("#modal-a-sound-player-4-enabled").addClass("is-active")'>
+                            <span class="icon has-text-info">
+                                <i class="fas fa-plus"></i>
+                            </span>
+                            </a>
+                        </div>
+                        
+                    </form>
+                    <div class="modal" id="modal-a-sound-player-4-enabled">
+    <div class="modal-background"></div>
+    <div class="modal-card">
+        <header class="modal-card-head">
+            <p class="modal-card-title">Actions on events: <br><em>Playlist user C</em></p>
+            <button onclick='$("#modal-a-sound-player-4-enabled").removeClass("is-active")' class="delete" aria-label="close"></button>
+        </header>
+        <section class="modal-card-body">
+
+            <div>
+                Events of type <b>Playlist user C</b>
+                <div>
+                    <label class="checkbox">
+                        Enable processing for <b>a sound player</b>:
+                        <input name="value" id="a-sound-player-4-enabled" class="double ml-2" type="checkbox" checked onchange="ajaxPostValue('/appliance/a%20sound%20player/enable',
+                                       'home.appliance.sound.player.event.forced.circadian_rhythm.playlist_c', 'Event',
+                                       $('#a-sound-player-4-enabled').prop('checked'))">
+                    </label>
+                </div>
+                <div class="mt-4">
+                    <button class="button is-info" onclick="ajaxPostValue('/appliance/a%20sound%20player/apply_to_others',
+                                    'home.appliance.sound.player.event.forced.circadian_rhythm.playlist_c', 'Event',
+                                    $('#a-sound-player-4-enabled').prop('checked'));
+                                    $('#modal-a-sound-player-4-enabled').removeClass('is-active')">
+                        Apply to all similar appliances
+                    </button>
+                </div>
+                <div class="mt-4">
+                    <button class="button is-info" onclick="ajaxPostValue('/appliance/a%20sound%20player/apply_to_collection',
+                                    'home.appliance.sound.player.event.forced.circadian_rhythm.playlist_c', 'Event',
+                                    $('#a-sound-player-4-enabled').prop('checked'));
+                                    $('#modal-a-sound-player-4-enabled').removeClass('is-active')">
+                        Apply to similar appliances in the same collection
+                    </button>
+                </div>
+            </div>
+
+
+            <div class="mt-4">
+                Event <b>Playlist user C: Afternoon Alessandro</b>
+                <div class="mt-4">
+                    <button class="button is-info" onclick="ajaxPostSimple('/appliance/a%20sound%20player/send_to_others',
+                                    'home.appliance.sound.player.event.forced.circadian_rhythm.playlist_c', 'Event');
+                                    $('#modal-a-sound-player-4-enabled').removeClass('is-active')">
+                        Send to all similar appliances
+                    </button>
+                </div>
+                <div class="mt-4">
+                    <button class="button is-info" onclick="ajaxPostSimple('/appliance/a%20sound%20player/send_to_collection',
+                                    'home.appliance.sound.player.event.forced.circadian_rhythm.playlist_c', 'Event');
+                                    $('#modal-a-sound-player-4-enabled').removeClass('is-active')">
+                        Send to similar appliances in the same collection
+                    </button>
+                </div>
+            </div>
+        </section>
+    </div>
+</div>
+                
+
+            
+
+                
+                    <form class="tile is-parent box" style="display: none;" action="./0a7b36e5__a%20sound%20player.html" method="POST" id="form-a-sound-player-3">
+                        <input type="hidden" name="module" value="home.appliance.sound.player.event.fade_out.volume">
+                        <input type="hidden" name="klass" value="Event">
+                        <div class="tile is-child is-3">
+    <label for="a-sound-player-3-label">Volume</label>
+</div>
+<div class="tile is-child pr-6">
+    
+    <input class="input is-info" type="number" min="0" max="100" name="value" id="a-sound-player-3" value="20" onchange="ajaxPostValue('', 'home.appliance.sound.player.event.fade_out.volume', 'Event', $('#a-sound-player-3').val())">
+    
+</div>
+<div class="modal" id="modal-a-sound-player-3-enabled">
+    <div class="modal-background"></div>
+    <div class="modal-card">
+        <header class="modal-card-head">
+            <p class="modal-card-title">Actions on events: <br><em>Volume</em></p>
+            <button onclick='$("#modal-a-sound-player-3-enabled").removeClass("is-active")' class="delete" aria-label="close"></button>
+        </header>
+        <section class="modal-card-body">
+
+            <div>
+                Events of type <b>Volume</b>
+                <div>
+                    <label class="checkbox">
+                        Enable processing for <b>a sound player</b>:
+                        <input name="value" id="a-sound-player-3-enabled" class="double ml-2" type="checkbox" checked onchange="ajaxPostValue('/appliance/a%20sound%20player/enable',
+                                       'home.appliance.sound.player.event.fade_out.volume', 'Event',
+                                       $('#a-sound-player-3-enabled').prop('checked'))">
+                    </label>
+                </div>
+                <div class="mt-4">
+                    <button class="button is-info" onclick="ajaxPostValue('/appliance/a%20sound%20player/apply_to_others',
+                                    'home.appliance.sound.player.event.fade_out.volume', 'Event',
+                                    $('#a-sound-player-3-enabled').prop('checked'));
+                                    $('#modal-a-sound-player-3-enabled').removeClass('is-active')">
+                        Apply to all similar appliances
+                    </button>
+                </div>
+                <div class="mt-4">
+                    <button class="button is-info" onclick="ajaxPostValue('/appliance/a%20sound%20player/apply_to_collection',
+                                    'home.appliance.sound.player.event.fade_out.volume', 'Event',
+                                    $('#a-sound-player-3-enabled').prop('checked'));
+                                    $('#modal-a-sound-player-3-enabled').removeClass('is-active')">
+                        Apply to similar appliances in the same collection
+                    </button>
+                </div>
+            </div>
+
+
+            <div class="mt-4">
+                Event <b>Volume: 20</b>
+                <div class="mt-4">
+                    <button class="button is-info" onclick="ajaxPostSimple('/appliance/a%20sound%20player/send_to_others',
+                                    'home.appliance.sound.player.event.fade_out.volume', 'Event');
+                                    $('#modal-a-sound-player-3-enabled').removeClass('is-active')">
+                        Send to all similar appliances
+                    </button>
+                </div>
+                <div class="mt-4">
+                    <button class="button is-info" onclick="ajaxPostSimple('/appliance/a%20sound%20player/send_to_collection',
+                                    'home.appliance.sound.player.event.fade_out.volume', 'Event');
+                                    $('#modal-a-sound-player-3-enabled').removeClass('is-active')">
+                        Send to similar appliances in the same collection
+                    </button>
+                </div>
+            </div>
+        </section>
+    </div>
+</div>
+
+
+                        
+                        <div class="tile is-child is-1">
+                            <a onclick='$("#modal-a-sound-player-3-enabled").addClass("is-active")'>
+                            <span class="icon has-text-info">
+                                <i class="fas fa-plus"></i>
+                            </span>
+                            </a>
+                        </div>
+                        
+                    </form>
+                    <div class="modal" id="modal-a-sound-player-3-enabled">
+    <div class="modal-background"></div>
+    <div class="modal-card">
+        <header class="modal-card-head">
+            <p class="modal-card-title">Actions on events: <br><em>Volume</em></p>
+            <button onclick='$("#modal-a-sound-player-3-enabled").removeClass("is-active")' class="delete" aria-label="close"></button>
+        </header>
+        <section class="modal-card-body">
+
+            <div>
+                Events of type <b>Volume</b>
+                <div>
+                    <label class="checkbox">
+                        Enable processing for <b>a sound player</b>:
+                        <input name="value" id="a-sound-player-3-enabled" class="double ml-2" type="checkbox" checked onchange="ajaxPostValue('/appliance/a%20sound%20player/enable',
+                                       'home.appliance.sound.player.event.fade_out.volume', 'Event',
+                                       $('#a-sound-player-3-enabled').prop('checked'))">
+                    </label>
+                </div>
+                <div class="mt-4">
+                    <button class="button is-info" onclick="ajaxPostValue('/appliance/a%20sound%20player/apply_to_others',
+                                    'home.appliance.sound.player.event.fade_out.volume', 'Event',
+                                    $('#a-sound-player-3-enabled').prop('checked'));
+                                    $('#modal-a-sound-player-3-enabled').removeClass('is-active')">
+                        Apply to all similar appliances
+                    </button>
+                </div>
+                <div class="mt-4">
+                    <button class="button is-info" onclick="ajaxPostValue('/appliance/a%20sound%20player/apply_to_collection',
+                                    'home.appliance.sound.player.event.fade_out.volume', 'Event',
+                                    $('#a-sound-player-3-enabled').prop('checked'));
+                                    $('#modal-a-sound-player-3-enabled').removeClass('is-active')">
+                        Apply to similar appliances in the same collection
+                    </button>
+                </div>
+            </div>
+
+
+            <div class="mt-4">
+                Event <b>Volume: 20</b>
+                <div class="mt-4">
+                    <button class="button is-info" onclick="ajaxPostSimple('/appliance/a%20sound%20player/send_to_others',
+                                    'home.appliance.sound.player.event.fade_out.volume', 'Event');
+                                    $('#modal-a-sound-player-3-enabled').removeClass('is-active')">
+                        Send to all similar appliances
+                    </button>
+                </div>
+                <div class="mt-4">
+                    <button class="button is-info" onclick="ajaxPostSimple('/appliance/a%20sound%20player/send_to_collection',
+                                    'home.appliance.sound.player.event.fade_out.volume', 'Event');
+                                    $('#modal-a-sound-player-3-enabled').removeClass('is-active')">
+                        Send to similar appliances in the same collection
+                    </button>
+                </div>
+            </div>
+        </section>
+    </div>
+</div>
+                
+
+            
+
+                
+                    <form class="tile is-parent box" style="display: none;" action="./0a7b36e5__a%20sound%20player.html" method="POST" id="form-a-sound-player-2">
+                        <input type="hidden" name="module" value="home.appliance.sound.player.event.fade_out.playlist">
+                        <input type="hidden" name="klass" value="Event">
+                        <div class="tile is-child is-3">
+    <label for="a-sound-player-2-label">Playlist</label>
+</div>
+<div class="tile is-child pr-6">
+    
+    <input class="input is-info" type="text" name="value" id="a-sound-player-2" value="Fade Out" onchange="ajaxPostValue('', 'home.appliance.sound.player.event.fade_out.playlist', 'Event', $('#a-sound-player-2').val())">
+    
+</div>
+<div class="modal" id="modal-a-sound-player-2-enabled">
+    <div class="modal-background"></div>
+    <div class="modal-card">
+        <header class="modal-card-head">
+            <p class="modal-card-title">Actions on events: <br><em>Playlist</em></p>
+            <button onclick='$("#modal-a-sound-player-2-enabled").removeClass("is-active")' class="delete" aria-label="close"></button>
+        </header>
+        <section class="modal-card-body">
+
+            <div>
+                Events of type <b>Playlist</b>
+                <div>
+                    <label class="checkbox">
+                        Enable processing for <b>a sound player</b>:
+                        <input name="value" id="a-sound-player-2-enabled" class="double ml-2" type="checkbox" checked onchange="ajaxPostValue('/appliance/a%20sound%20player/enable',
+                                       'home.appliance.sound.player.event.fade_out.playlist', 'Event',
+                                       $('#a-sound-player-2-enabled').prop('checked'))">
+                    </label>
+                </div>
+                <div class="mt-4">
+                    <button class="button is-info" onclick="ajaxPostValue('/appliance/a%20sound%20player/apply_to_others',
+                                    'home.appliance.sound.player.event.fade_out.playlist', 'Event',
+                                    $('#a-sound-player-2-enabled').prop('checked'));
+                                    $('#modal-a-sound-player-2-enabled').removeClass('is-active')">
+                        Apply to all similar appliances
+                    </button>
+                </div>
+                <div class="mt-4">
+                    <button class="button is-info" onclick="ajaxPostValue('/appliance/a%20sound%20player/apply_to_collection',
+                                    'home.appliance.sound.player.event.fade_out.playlist', 'Event',
+                                    $('#a-sound-player-2-enabled').prop('checked'));
+                                    $('#modal-a-sound-player-2-enabled').removeClass('is-active')">
+                        Apply to similar appliances in the same collection
+                    </button>
+                </div>
+            </div>
+
+
+            <div class="mt-4">
+                Event <b>Playlist: Fade Out</b>
+                <div class="mt-4">
+                    <button class="button is-info" onclick="ajaxPostSimple('/appliance/a%20sound%20player/send_to_others',
+                                    'home.appliance.sound.player.event.fade_out.playlist', 'Event');
+                                    $('#modal-a-sound-player-2-enabled').removeClass('is-active')">
+                        Send to all similar appliances
+                    </button>
+                </div>
+                <div class="mt-4">
+                    <button class="button is-info" onclick="ajaxPostSimple('/appliance/a%20sound%20player/send_to_collection',
+                                    'home.appliance.sound.player.event.fade_out.playlist', 'Event');
+                                    $('#modal-a-sound-player-2-enabled').removeClass('is-active')">
+                        Send to similar appliances in the same collection
+                    </button>
+                </div>
+            </div>
+        </section>
+    </div>
+</div>
+
+
+                        
+                        <div class="tile is-child is-1">
+                            <a onclick='$("#modal-a-sound-player-2-enabled").addClass("is-active")'>
+                            <span class="icon has-text-info">
+                                <i class="fas fa-plus"></i>
+                            </span>
+                            </a>
+                        </div>
+                        
+                    </form>
+                    <div class="modal" id="modal-a-sound-player-2-enabled">
+    <div class="modal-background"></div>
+    <div class="modal-card">
+        <header class="modal-card-head">
+            <p class="modal-card-title">Actions on events: <br><em>Playlist</em></p>
+            <button onclick='$("#modal-a-sound-player-2-enabled").removeClass("is-active")' class="delete" aria-label="close"></button>
+        </header>
+        <section class="modal-card-body">
+
+            <div>
+                Events of type <b>Playlist</b>
+                <div>
+                    <label class="checkbox">
+                        Enable processing for <b>a sound player</b>:
+                        <input name="value" id="a-sound-player-2-enabled" class="double ml-2" type="checkbox" checked onchange="ajaxPostValue('/appliance/a%20sound%20player/enable',
+                                       'home.appliance.sound.player.event.fade_out.playlist', 'Event',
+                                       $('#a-sound-player-2-enabled').prop('checked'))">
+                    </label>
+                </div>
+                <div class="mt-4">
+                    <button class="button is-info" onclick="ajaxPostValue('/appliance/a%20sound%20player/apply_to_others',
+                                    'home.appliance.sound.player.event.fade_out.playlist', 'Event',
+                                    $('#a-sound-player-2-enabled').prop('checked'));
+                                    $('#modal-a-sound-player-2-enabled').removeClass('is-active')">
+                        Apply to all similar appliances
+                    </button>
+                </div>
+                <div class="mt-4">
+                    <button class="button is-info" onclick="ajaxPostValue('/appliance/a%20sound%20player/apply_to_collection',
+                                    'home.appliance.sound.player.event.fade_out.playlist', 'Event',
+                                    $('#a-sound-player-2-enabled').prop('checked'));
+                                    $('#modal-a-sound-player-2-enabled').removeClass('is-active')">
+                        Apply to similar appliances in the same collection
+                    </button>
+                </div>
+            </div>
+
+
+            <div class="mt-4">
+                Event <b>Playlist: Fade Out</b>
+                <div class="mt-4">
+                    <button class="button is-info" onclick="ajaxPostSimple('/appliance/a%20sound%20player/send_to_others',
+                                    'home.appliance.sound.player.event.fade_out.playlist', 'Event');
+                                    $('#modal-a-sound-player-2-enabled').removeClass('is-active')">
+                        Send to all similar appliances
+                    </button>
+                </div>
+                <div class="mt-4">
+                    <button class="button is-info" onclick="ajaxPostSimple('/appliance/a%20sound%20player/send_to_collection',
+                                    'home.appliance.sound.player.event.fade_out.playlist', 'Event');
+                                    $('#modal-a-sound-player-2-enabled').removeClass('is-active')">
+                        Send to similar appliances in the same collection
+                    </button>
+                </div>
+            </div>
+        </section>
+    </div>
+</div>
+                
+
+            
+
+                
+                    <form class="tile is-parent box" style="display: none;" action="./0a7b36e5__a%20sound%20player.html" method="POST" id="form-a-sound-player-1">
+                        <input type="hidden" name="module" value="home.appliance.sound.player.event.fade_in.volume">
+                        <input type="hidden" name="klass" value="Event">
+                        <div class="tile is-child is-3">
+    <label for="a-sound-player-1-label">Volume</label>
+</div>
+<div class="tile is-child pr-6">
+    
+    <input class="input is-info" type="number" min="0" max="100" name="value" id="a-sound-player-1" value="30" onchange="ajaxPostValue('', 'home.appliance.sound.player.event.fade_in.volume', 'Event', $('#a-sound-player-1').val())">
+    
+</div>
+<div class="modal" id="modal-a-sound-player-1-enabled">
+    <div class="modal-background"></div>
+    <div class="modal-card">
+        <header class="modal-card-head">
+            <p class="modal-card-title">Actions on events: <br><em>Volume</em></p>
+            <button onclick='$("#modal-a-sound-player-1-enabled").removeClass("is-active")' class="delete" aria-label="close"></button>
+        </header>
+        <section class="modal-card-body">
+
+            <div>
+                Events of type <b>Volume</b>
+                <div>
+                    <label class="checkbox">
+                        Enable processing for <b>a sound player</b>:
+                        <input name="value" id="a-sound-player-1-enabled" class="double ml-2" type="checkbox" checked onchange="ajaxPostValue('/appliance/a%20sound%20player/enable',
+                                       'home.appliance.sound.player.event.fade_in.volume', 'Event',
+                                       $('#a-sound-player-1-enabled').prop('checked'))">
+                    </label>
+                </div>
+                <div class="mt-4">
+                    <button class="button is-info" onclick="ajaxPostValue('/appliance/a%20sound%20player/apply_to_others',
+                                    'home.appliance.sound.player.event.fade_in.volume', 'Event',
+                                    $('#a-sound-player-1-enabled').prop('checked'));
+                                    $('#modal-a-sound-player-1-enabled').removeClass('is-active')">
+                        Apply to all similar appliances
+                    </button>
+                </div>
+                <div class="mt-4">
+                    <button class="button is-info" onclick="ajaxPostValue('/appliance/a%20sound%20player/apply_to_collection',
+                                    'home.appliance.sound.player.event.fade_in.volume', 'Event',
+                                    $('#a-sound-player-1-enabled').prop('checked'));
+                                    $('#modal-a-sound-player-1-enabled').removeClass('is-active')">
+                        Apply to similar appliances in the same collection
+                    </button>
+                </div>
+            </div>
+
+
+            <div class="mt-4">
+                Event <b>Volume: 30</b>
+                <div class="mt-4">
+                    <button class="button is-info" onclick="ajaxPostSimple('/appliance/a%20sound%20player/send_to_others',
+                                    'home.appliance.sound.player.event.fade_in.volume', 'Event');
+                                    $('#modal-a-sound-player-1-enabled').removeClass('is-active')">
+                        Send to all similar appliances
+                    </button>
+                </div>
+                <div class="mt-4">
+                    <button class="button is-info" onclick="ajaxPostSimple('/appliance/a%20sound%20player/send_to_collection',
+                                    'home.appliance.sound.player.event.fade_in.volume', 'Event');
+                                    $('#modal-a-sound-player-1-enabled').removeClass('is-active')">
+                        Send to similar appliances in the same collection
+                    </button>
+                </div>
+            </div>
+        </section>
+    </div>
+</div>
+
+
+                        
+                        <div class="tile is-child is-1">
+                            <a onclick='$("#modal-a-sound-player-1-enabled").addClass("is-active")'>
+                            <span class="icon has-text-info">
+                                <i class="fas fa-plus"></i>
+                            </span>
+                            </a>
+                        </div>
+                        
+                    </form>
+                    <div class="modal" id="modal-a-sound-player-1-enabled">
+    <div class="modal-background"></div>
+    <div class="modal-card">
+        <header class="modal-card-head">
+            <p class="modal-card-title">Actions on events: <br><em>Volume</em></p>
+            <button onclick='$("#modal-a-sound-player-1-enabled").removeClass("is-active")' class="delete" aria-label="close"></button>
+        </header>
+        <section class="modal-card-body">
+
+            <div>
+                Events of type <b>Volume</b>
+                <div>
+                    <label class="checkbox">
+                        Enable processing for <b>a sound player</b>:
+                        <input name="value" id="a-sound-player-1-enabled" class="double ml-2" type="checkbox" checked onchange="ajaxPostValue('/appliance/a%20sound%20player/enable',
+                                       'home.appliance.sound.player.event.fade_in.volume', 'Event',
+                                       $('#a-sound-player-1-enabled').prop('checked'))">
+                    </label>
+                </div>
+                <div class="mt-4">
+                    <button class="button is-info" onclick="ajaxPostValue('/appliance/a%20sound%20player/apply_to_others',
+                                    'home.appliance.sound.player.event.fade_in.volume', 'Event',
+                                    $('#a-sound-player-1-enabled').prop('checked'));
+                                    $('#modal-a-sound-player-1-enabled').removeClass('is-active')">
+                        Apply to all similar appliances
+                    </button>
+                </div>
+                <div class="mt-4">
+                    <button class="button is-info" onclick="ajaxPostValue('/appliance/a%20sound%20player/apply_to_collection',
+                                    'home.appliance.sound.player.event.fade_in.volume', 'Event',
+                                    $('#a-sound-player-1-enabled').prop('checked'));
+                                    $('#modal-a-sound-player-1-enabled').removeClass('is-active')">
+                        Apply to similar appliances in the same collection
+                    </button>
+                </div>
+            </div>
+
+
+            <div class="mt-4">
+                Event <b>Volume: 30</b>
+                <div class="mt-4">
+                    <button class="button is-info" onclick="ajaxPostSimple('/appliance/a%20sound%20player/send_to_others',
+                                    'home.appliance.sound.player.event.fade_in.volume', 'Event');
+                                    $('#modal-a-sound-player-1-enabled').removeClass('is-active')">
+                        Send to all similar appliances
+                    </button>
+                </div>
+                <div class="mt-4">
+                    <button class="button is-info" onclick="ajaxPostSimple('/appliance/a%20sound%20player/send_to_collection',
+                                    'home.appliance.sound.player.event.fade_in.volume', 'Event');
+                                    $('#modal-a-sound-player-1-enabled').removeClass('is-active')">
+                        Send to similar appliances in the same collection
+                    </button>
+                </div>
+            </div>
+        </section>
+    </div>
+</div>
+                
+
+            
+
+                
+                    <form class="tile is-parent box" style="display: none;" action="./0a7b36e5__a%20sound%20player.html" method="POST" id="form-a-sound-player-0">
+                        <input type="hidden" name="module" value="home.appliance.sound.player.event.fade_in.playlist">
+                        <input type="hidden" name="klass" value="Event">
+                        <div class="tile is-child is-3">
+    <label for="a-sound-player-0-label">Playlist</label>
+</div>
+<div class="tile is-child pr-6">
+    
+    <input class="input is-info" type="text" name="value" id="a-sound-player-0" value="Fade In" onchange="ajaxPostValue('', 'home.appliance.sound.player.event.fade_in.playlist', 'Event', $('#a-sound-player-0').val())">
+    
+</div>
+<div class="modal" id="modal-a-sound-player-0-enabled">
+    <div class="modal-background"></div>
+    <div class="modal-card">
+        <header class="modal-card-head">
+            <p class="modal-card-title">Actions on events: <br><em>Playlist</em></p>
+            <button onclick='$("#modal-a-sound-player-0-enabled").removeClass("is-active")' class="delete" aria-label="close"></button>
+        </header>
+        <section class="modal-card-body">
+
+            <div>
+                Events of type <b>Playlist</b>
+                <div>
+                    <label class="checkbox">
+                        Enable processing for <b>a sound player</b>:
+                        <input name="value" id="a-sound-player-0-enabled" class="double ml-2" type="checkbox" checked onchange="ajaxPostValue('/appliance/a%20sound%20player/enable',
+                                       'home.appliance.sound.player.event.fade_in.playlist', 'Event',
+                                       $('#a-sound-player-0-enabled').prop('checked'))">
+                    </label>
+                </div>
+                <div class="mt-4">
+                    <button class="button is-info" onclick="ajaxPostValue('/appliance/a%20sound%20player/apply_to_others',
+                                    'home.appliance.sound.player.event.fade_in.playlist', 'Event',
+                                    $('#a-sound-player-0-enabled').prop('checked'));
+                                    $('#modal-a-sound-player-0-enabled').removeClass('is-active')">
+                        Apply to all similar appliances
+                    </button>
+                </div>
+                <div class="mt-4">
+                    <button class="button is-info" onclick="ajaxPostValue('/appliance/a%20sound%20player/apply_to_collection',
+                                    'home.appliance.sound.player.event.fade_in.playlist', 'Event',
+                                    $('#a-sound-player-0-enabled').prop('checked'));
+                                    $('#modal-a-sound-player-0-enabled').removeClass('is-active')">
+                        Apply to similar appliances in the same collection
+                    </button>
+                </div>
+            </div>
+
+
+            <div class="mt-4">
+                Event <b>Playlist: Fade In</b>
+                <div class="mt-4">
+                    <button class="button is-info" onclick="ajaxPostSimple('/appliance/a%20sound%20player/send_to_others',
+                                    'home.appliance.sound.player.event.fade_in.playlist', 'Event');
+                                    $('#modal-a-sound-player-0-enabled').removeClass('is-active')">
+                        Send to all similar appliances
+                    </button>
+                </div>
+                <div class="mt-4">
+                    <button class="button is-info" onclick="ajaxPostSimple('/appliance/a%20sound%20player/send_to_collection',
+                                    'home.appliance.sound.player.event.fade_in.playlist', 'Event');
+                                    $('#modal-a-sound-player-0-enabled').removeClass('is-active')">
+                        Send to similar appliances in the same collection
+                    </button>
+                </div>
+            </div>
+        </section>
+    </div>
+</div>
+
+
+                        
+                        <div class="tile is-child is-1">
+                            <a onclick='$("#modal-a-sound-player-0-enabled").addClass("is-active")'>
+                            <span class="icon has-text-info">
+                                <i class="fas fa-plus"></i>
+                            </span>
+                            </a>
+                        </div>
+                        
+                    </form>
+                    <div class="modal" id="modal-a-sound-player-0-enabled">
+    <div class="modal-background"></div>
+    <div class="modal-card">
+        <header class="modal-card-head">
+            <p class="modal-card-title">Actions on events: <br><em>Playlist</em></p>
+            <button onclick='$("#modal-a-sound-player-0-enabled").removeClass("is-active")' class="delete" aria-label="close"></button>
+        </header>
+        <section class="modal-card-body">
+
+            <div>
+                Events of type <b>Playlist</b>
+                <div>
+                    <label class="checkbox">
+                        Enable processing for <b>a sound player</b>:
+                        <input name="value" id="a-sound-player-0-enabled" class="double ml-2" type="checkbox" checked onchange="ajaxPostValue('/appliance/a%20sound%20player/enable',
+                                       'home.appliance.sound.player.event.fade_in.playlist', 'Event',
+                                       $('#a-sound-player-0-enabled').prop('checked'))">
+                    </label>
+                </div>
+                <div class="mt-4">
+                    <button class="button is-info" onclick="ajaxPostValue('/appliance/a%20sound%20player/apply_to_others',
+                                    'home.appliance.sound.player.event.fade_in.playlist', 'Event',
+                                    $('#a-sound-player-0-enabled').prop('checked'));
+                                    $('#modal-a-sound-player-0-enabled').removeClass('is-active')">
+                        Apply to all similar appliances
+                    </button>
+                </div>
+                <div class="mt-4">
+                    <button class="button is-info" onclick="ajaxPostValue('/appliance/a%20sound%20player/apply_to_collection',
+                                    'home.appliance.sound.player.event.fade_in.playlist', 'Event',
+                                    $('#a-sound-player-0-enabled').prop('checked'));
+                                    $('#modal-a-sound-player-0-enabled').removeClass('is-active')">
+                        Apply to similar appliances in the same collection
+                    </button>
+                </div>
+            </div>
+
+
+            <div class="mt-4">
+                Event <b>Playlist: Fade In</b>
+                <div class="mt-4">
+                    <button class="button is-info" onclick="ajaxPostSimple('/appliance/a%20sound%20player/send_to_others',
+                                    'home.appliance.sound.player.event.fade_in.playlist', 'Event');
+                                    $('#modal-a-sound-player-0-enabled').removeClass('is-active')">
+                        Send to all similar appliances
+                    </button>
+                </div>
+                <div class="mt-4">
+                    <button class="button is-info" onclick="ajaxPostSimple('/appliance/a%20sound%20player/send_to_collection',
+                                    'home.appliance.sound.player.event.fade_in.playlist', 'Event');
+                                    $('#modal-a-sound-player-0-enabled').removeClass('is-active')">
+                        Send to similar appliances in the same collection
+                    </button>
+                </div>
+            </div>
+        </section>
+    </div>
+</div>
+                
+
+            
+        </div>
+
+    </div>
+</section>
+</body>
+</html>

@@ -1,0 +1,23 @@
+- !circadian_rhythm.Trigger
+  name: "user Maja playlists"
+  events: []
+  events_in_a_day:
+    - !sound.player.event.forced.circadian_rhythm.playlist_a.Event { value: "Night Maja" }
+    - !sound.player.event.forced.circadian_rhythm.playlist_a.Event { value: "Morning Maja" }
+    - !sound.player.event.forced.circadian_rhythm.playlist_a.Event { value: "Afternoon Maja" }
+    -
+- !circadian_rhythm.Trigger
+  name: "user Alja playlists"
+  events: []
+  events_in_a_day:
+    - !sound.player.event.forced.circadian_rhythm.playlist_b.Event { value: "Night Alja" }
+    - !sound.player.event.forced.circadian_rhythm.playlist_b.Event { value: "Morning Alja" }
+    - !sound.player.event.forced.circadian_rhythm.playlist_b.Event { value: "Afternoon Alja" }
+    -
+- !circadian_rhythm.Trigger
+  name: "user Alessandro playlists"
+  events: []
+  events_in_a_day:
+    - !sound.player.event.forced.circadian_rhythm.playlist_c.Event { value: "Night Alessandro" }
+    - !sound.player.event.forced.circadian_rhythm.playlist_c.Event { value: "Morning Alessandro" }
+    - !sound.player.event.forced.circadian_rhythm.playlist_c.Event { value: "Afternoon Alessandro" }

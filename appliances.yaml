@@ -1,0 +1,10 @@
+!Appliances
+  Sound Player:
+    - !sound.player.Appliance
+      name: "a sound player"
+      events:
+          - !sound.player.event.playlist.Event {value: "Common"}
+          - !sound.player.event.fade_in.volume.Event {value: 1}
+          - !sound.player.event.fade_out.volume.Event {value: 20}
+          - !sound.player.event.fade_in.playlist.Event {value: "Fade In"}
+          - !sound.player.event.fade_out.playlist.Event {value: "Fade Out"}
