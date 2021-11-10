@@ -21,4 +21,4 @@ docker exec -it sound-player /bin/bash
 
 ## UI
 
-[GUI example](https://majamassarini.github.io/automate-sound-player-example/gh-pages/172.31.10.247/index.html)
+[GUI example](https://majamassarini.github.io/automate-sound-player-example/pages/172.31.10.247/index.html)
