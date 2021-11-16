@@ -1,13 +1,23 @@
-Automate Home Sound Player example project
-====================================
+automate-home sound player example project
+==========================================
 
-A collection of files which define automation rules for sound player **Appliance**.
+An example project for the [automate-home project](https://github.com/majamassarini/automate-home).
 
-Automated **Appliance**:
+A collection of files which define automation rules for one single **Appliance**.
 
- - sound.player.Appliance
+- [sound.player.Appliance](https://automate-home.readthedocs.io/en/latest/appliances.html#sound-player-appliance)
 
-## Run Automate Home docker container using this project files
+This *Appliance* automates a **Sonos** device, through a *Performer*.
+
+To automate the sound player two sensors, other than the buttons, are used:
+
+- [sensor.luxmeter.Appliance](https://automate-home.readthedocs.io/en/latest/appliances.html#sensor-luxmeter-appliance); data come from a **KNX** sensor.
+- [sensor.alarm.Appliance](https://automate-home.readthedocs.io/en/latest/appliances.html#sensor-alarm-appliance); data come from **KNX**.
+
+## Project notes
+  1. The buttons, in this project, have not an associated Appliance model, their *KNX* messages are directly delivered to the sound player Appliance through the *Performers*.  
+
+## Run automate-home docker container using this project files
 
 ```shell
 export AUTOMATE_HOME_CONFIGURATION=`pwd`
