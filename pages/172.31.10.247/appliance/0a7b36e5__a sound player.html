@@ -5,7 +5,7 @@
 * AerWebCopy Engine [version 6.3.0]
 * Copyright Aeroson Systems & Co.
 * File mirrored from http://172.31.10.247:8181/appliance/a sound player
-* At UTC time: 2021-11-10 21:08:47.120264
+* At UTC time: 2021-11-22 21:33:20.213204
 
 --><head>
     <meta charset="utf-8">
@@ -520,17 +520,17 @@
 </div>
 <div class="tile is-child pr-6">
     <span class="icon has-text-info">
-        <i id="a-sound-player-10-icon" class="home.event.user.Event.C"></i>
+        <i id="a-sound-player-10-icon" class="home.event.user.Event.A"></i>
     </span>
 
     <div class="select is-info">
             <select name="value" id="a-sound-player-10" form="form-a-sound-player-10" onchange="ajaxPostValue('', 'home.event.user', 'Event', $('#a-sound-player-10 option:selected').val())">
                 
-                    <option value="A">A</option>
+                    <option value="A" selected>A</option>
                 
                     <option value="B">B</option>
                 
-                    <option value="C" selected>C</option>
+                    <option value="C">C</option>
                 
             </select>
     </div>
@@ -586,7 +586,7 @@
 
 
             <div class="mt-4">
-                Event <b>User: C</b>
+                Event <b>User: A</b>
                 <div class="mt-4">
                     <button class="button is-info" onclick="ajaxPostSimple('/appliance/a%20sound%20player/send_to_others',
                                     'home.event.user', 'Event');
@@ -762,7 +762,7 @@
 </div>
 <div class="tile is-child pr-6">
     
-    <input class="input is-info" type="number" min="0" max="100" name="value" id="a-sound-player-8" value="20" onchange="ajaxPostValue('', 'home.appliance.sound.player.event.volume', 'Event', $('#a-sound-player-8').val())">
+    <input class="input is-info" type="number" min="0" max="100" name="value" id="a-sound-player-8" value="1" onchange="ajaxPostValue('', 'home.appliance.sound.player.event.volume', 'Event', $('#a-sound-player-8').val())">
     
 </div>
 <div class="modal" id="modal-a-sound-player-8-enabled">
@@ -804,7 +804,7 @@
 
 
             <div class="mt-4">
-                Event <b>Volume: 20</b>
+                Event <b>Volume: 1</b>
                 <div class="mt-4">
                     <button class="button is-info" onclick="ajaxPostSimple('/appliance/a%20sound%20player/send_to_others',
                                     'home.appliance.sound.player.event.volume', 'Event');
@@ -874,7 +874,7 @@
 
 
             <div class="mt-4">
-                Event <b>Volume: 20</b>
+                Event <b>Volume: 1</b>
                 <div class="mt-4">
                     <button class="button is-info" onclick="ajaxPostSimple('/appliance/a%20sound%20player/send_to_others',
                                     'home.appliance.sound.player.event.volume', 'Event');
@@ -1770,7 +1770,7 @@
 </div>
 <div class="tile is-child pr-6">
     
-    <input class="input is-info" type="number" min="0" max="100" name="value" id="a-sound-player-1" value="30" onchange="ajaxPostValue('', 'home.appliance.sound.player.event.fade_in.volume', 'Event', $('#a-sound-player-1').val())">
+    <input class="input is-info" type="number" min="0" max="100" name="value" id="a-sound-player-1" value="15" onchange="ajaxPostValue('', 'home.appliance.sound.player.event.fade_in.volume', 'Event', $('#a-sound-player-1').val())">
     
 </div>
 <div class="modal" id="modal-a-sound-player-1-enabled">
@@ -1812,7 +1812,7 @@
 
 
             <div class="mt-4">
-                Event <b>Volume: 30</b>
+                Event <b>Volume: 15</b>
                 <div class="mt-4">
                     <button class="button is-info" onclick="ajaxPostSimple('/appliance/a%20sound%20player/send_to_others',
                                     'home.appliance.sound.player.event.fade_in.volume', 'Event');
@@ -1882,7 +1882,7 @@
 
 
             <div class="mt-4">
-                Event <b>Volume: 30</b>
+                Event <b>Volume: 15</b>
                 <div class="mt-4">
                     <button class="button is-info" onclick="ajaxPostSimple('/appliance/a%20sound%20player/send_to_others',
                                     'home.appliance.sound.player.event.fade_in.volume', 'Event');
